@@ -20,15 +20,6 @@
 </head>
 
 <body class="sb-nav-fixed">
-
-    @include('admin.partials.header')
-    <!-- message -->
-    @if(session()->has('message'))
-    <p class="alert alert-success">{{ session()->get('message') }}</p>
-    @elseif(session()->has('error'))
-    <p class="alert alert-danger">{{ session()->get('error') }}</p>
-    @endif
-    <!-- end -->
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">

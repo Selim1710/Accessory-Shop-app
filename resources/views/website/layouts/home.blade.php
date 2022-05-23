@@ -105,7 +105,7 @@
             </div>
             @endforeach
         </div>
-        <div class="text-center mb-4"><a href="{{ route('website.all.product') }}" class="btn text-white w-25" style="background-color: #e84393;">View All Product</a></div>
+        <div class="all_product_btn w-50 btn"><a href="{{ route('website.all.product') }}">View All Product</a></div>
     </div>
 </section>
 

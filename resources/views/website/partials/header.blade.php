@@ -14,14 +14,13 @@
 					@else
 					<input type="text" name="search" value="" class="form-control" placeholder="Search here...">
 					@endif
-					<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
 				</div>
 			</form>
 			<div class="navbar-nav ml-auto">
 				<a href="{{ route('website.home') }}" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-home"></i>
 					<span>Home</span>
 				</a>
-				<a href="#" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-gift"></i>
+				<a href="#" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-product-hunt"></i>
 					<span>Product</span>
 				</a>
 				<a href="#" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-briefcase"></i>
