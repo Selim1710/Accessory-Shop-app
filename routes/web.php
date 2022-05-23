@@ -10,7 +10,6 @@ use App\Http\Controllers\Backend\StockController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\ManageOrderController;
 use App\Http\Controllers\Backend\ReportController;
-use App\Http\Controllers\Backend\OfferController;
 use App\Http\Controllers\Website\CartController;
 use App\Http\Controllers\Website\HomeController;
 use App\Http\Controllers\Website\UserController;
@@ -135,16 +134,6 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/edit/stock/{id}', [StockController::class, 'edit'])->name('admin.edit.stock');
         Route::post('/update/stock/{id}', [StockController::class, 'update'])->name('admin.update.stock');
         Route::get('/delete/stock/{id}', [StockController::class, 'delete'])->name('admin.delete.stock');
-
-        // Offer
-        Route::get('/manage/offer', [OfferController::class, 'manageOffer'])->name('admin.manage.offer');
-        Route::get('/add/offer', [OfferController::class, 'add'])->name('admin.add.offer');
-        Route::post('/store/offer', [OfferController::class, 'store'])->name('admin.store.offer');
-        Route::get('/view/offer/{id}', [OfferController::class, 'viewOffer'])->name('admin.view.offer');
-        Route::post('/change/offer/image/{id}', [OfferController::class, 'change'])->name('admin.change.offer.image');
-        Route::get('/edit/offer/{id}', [OfferController::class, 'edit'])->name('admin.edit.offer');
-        Route::post('/update/offer/{id}', [OfferController::class, 'update'])->name('admin.update.offer');
-        Route::get('/delete/offer/{id}', [OfferController::class, 'delete'])->name('admin.delete.offer');
 
         // Order List
         Route::get('/manage/order', [ManageOrderController::class, 'manageOrder'])->name('admin.manage.order');

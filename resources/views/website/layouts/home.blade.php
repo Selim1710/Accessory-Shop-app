@@ -22,56 +22,6 @@
         @endforeach
     </div>
 </section>
-<!-- Carousel  -->
-<section class="product-slider">
-    <div class="slider">
-        <div class="row">
-            <div class="col-lg-7">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        @foreach($offers_image as $key=>$offer)
-                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}"></li>
-                        @endforeach
-                    </ol>
-                    <div class="carousel-inner">
-                        @foreach($offers_image as $offer)
-                        @if($loop->first)
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="{{ asset('/uploads/offer/'.$offer ) }}" alt="First slide">
-                        </div>
-                        @else
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{{ asset('/uploads/offer/'.$offer ) }}" alt="First slide">
-                        </div>
-                        @endif
-                        @endforeach
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-            <!-- compare product -->
-            <div class="col-lg-4 mt-4">
-                <div class="compare-product text-center">
-                    <h3 class="pt-1">Compare Product</h3>
-                    <p>Choose two product to compare</p>
-                    <form action="{{ route('user.compare.product') }}" class="form-inline my-2 my-lg-0">
-                        <input type="search" name="search_c1" value="" placeholder="Search" class="form-control m-2 w-100" aria-label="Search">
-                        <input type="search" name="search_c2" value="" placeholder="Search" class="form-control m-2 w-100" aria-label="Search">
-                        <br>
-                        <input type="submit" class="bg-secondary p-2 border text-white w-100">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- Feature Category -->
 <section class="featured-Category border">
     <div class="categoryHeader">

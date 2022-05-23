@@ -4,12 +4,9 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\LaptopDeal;
 use App\Models\Product;
-use App\Models\Offer;
 use App\Models\Stock;
 use App\Models\Subcategory;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,8 +16,7 @@ class HomeController extends Controller
     {
         $categories = Category::with('subCategories')->get();
         $products = Product::with('subCategory')->orderBy('id','DESC')->paginate(8);
-        $offers_image = Offer::pluck('image');
-        return view('website.layouts.home', compact('categories', 'products','offers_image'));
+        return view('website.layouts.home', compact('categories', 'products'));
     }
     public function search(Request $request)
     {
@@ -57,17 +53,6 @@ class HomeController extends Controller
             $products = Product::where('subCategory_id', '=', $sub->id)->orderBy('id','DESC')->get();
         }
         return view('website.layouts.category_product', compact('products'));
-    }
-
-    public function offers()
-    {
-        $offers = Offer::all()->sortByDesc('id')->values();
-        return view('website.layouts.offers', compact('offers'));
-    }
-    public function offerDetails($id)
-    {
-        $offer = Offer::find($id);
-        return view('website.layouts.offer_details', compact('offer'));
     }
 
     public function laptopDeals()
