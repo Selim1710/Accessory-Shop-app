@@ -55,42 +55,6 @@ class HomeController extends Controller
         return view('website.layouts.category_product', compact('products'));
     }
 
-    public function laptopDeals()
-    {
-        // laravel query for laptop deals
-        $category = Category::where('category_name', 'LIKE', 'laptop')->get();
-        foreach ($category as $cat) {
-            $sub_cat = Subcategory::where('category_id', '=', $cat->id)->get();
-            foreach ($sub_cat as $sub) {
-                $product = Product::where('subCategory_id', '=', $sub->id)->orderBy('id','DESC')->get();
-            }
-        }
-        $laptopDeals = $product;
-        // laravel query for tablet deals
-        $category = Category::where('category_name', 'LIKE', 'tablet')->get();
-        foreach ($category as $cat) {
-            $sub_cat = Subcategory::where('category_id', '=', $cat->id)->get();
-            foreach ($sub_cat as $sub) {
-                $product = Product::where('subCategory_id', '=', $sub->id)->orderBy('id','DESC')->get();
-            }
-        }
-        $tabletDeals = $product;
-        // return $tabletDeals;
-        return view('website.layouts.laptop_deals', compact('laptopDeals', 'tabletDeals'));
-    }
-    public function laptopDealsDetails($id)
-    {
-        $product = Product::find($id);
-        $stocks = Stock::where('product_id', '=', $id)->get();
-        return view('website.layouts.laptop_deals_details', compact('product', 'stocks'));
-    }
-    public function productDetails($id)
-    {
-        $product = Product::find($id);
-        $stocks = Stock::where('product_id', '=', $id)->get();
-        return view('website.layouts.product_details', compact('product', 'stocks'));
-    }
-
     public function compareProduct(Request $request)
     {
         $search_c1 = $request['search_c1'] ?? "";

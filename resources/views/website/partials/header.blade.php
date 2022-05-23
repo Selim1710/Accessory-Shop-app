@@ -21,11 +21,11 @@
 				<a href="{{ route('website.home') }}" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-home"></i>
 					<span>Home</span>
 				</a>
-				<a href="{{ route('website.offers') }}" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-gift"></i>
-					<span>Offers</span>
+				<a href="#" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-gift"></i>
+					<span>Product</span>
 				</a>
-				<a href="{{ route('website.laptop.deals') }}" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-briefcase"></i>
-					<span>Laptop Deals</span>
+				<a href="#" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-briefcase"></i>
+					<span>Accessory</span>
 				</a>
 				@if(auth()->user())
 				<a href="{{ route('user.profile',auth()->user()->id) }}" class="nav-item nav-link" style="padding-left: 3.5rem;">

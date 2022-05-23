@@ -37,14 +37,6 @@ Route::group(['prefix' => 'website'], function () {
     // featured categories
     Route::get('/show/category/product/{id}', [HomeController::class, 'categoryProduct'])->name('show.category.product');
 
-    // offers
-    Route::get('/offers', [HomeController::class, 'offers'])->name('website.offers');
-    Route::get('/offer/details/{id}', [HomeController::class, 'offerDetails'])->name('website.offer.details');
-
-    // laptop deals
-    Route::get('/laptop/deals', [HomeController::class, 'laptopDeals'])->name('website.laptop.deals');
-    Route::get('/laptop/deals/details/{id}', [HomeController::class, 'laptopDealsDetails'])->name('website.deals.details');
-
     // login
     Route::get('/login/form', [UserController::class, 'loginForm'])->name('users.login.form');
     Route::post('/user/do/login', [UserController::class, 'doLogin'])->name('user.do.login');
