@@ -1,52 +1,32 @@
-<section class="header">
-	<nav class="navbar navbar-dark navbar-default navbar-expand-xl">
-		<a href="{{ route('website.home') }}" class="navbar-brand"><img src="{{ asset('website/images/bgdlogo.jpg') }}" alt="logo">BGD</a>
-		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-			<!-- search -->
-			<form action="{{ route('website.search') }}" method="POST" class="navbar-form form-inline">
-				@csrf
-				<div class="input-group search-box">
-					@if(!empty($search))
-					<input type="text" name="search" value="{{ $search }}" class="form-control" placeholder="Search here...">
-					@else
-					<input type="text" name="search" value="" class="form-control" placeholder="Search here...">
-					@endif
-				</div>
-			</form>
-			<div class="navbar-nav ml-auto">
-				<a href="{{ route('website.home') }}" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-home"></i>
-					<span>Home</span>
-				</a>
-				<a href="#" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-product-hunt"></i>
-					<span>Product</span>
-				</a>
-				<a href="#" class="nav-item nav-link" style="padding-right: 3.5rem;padding-left: 3.5rem;"><i class="fa fa-briefcase"></i>
-					<span>Accessory</span>
-				</a>
-				@if(auth()->user())
-				<a href="{{ route('user.profile',auth()->user()->id) }}" class="nav-item nav-link" style="padding-left: 3.5rem;">
-					<i class="fa fa-user"></i>
-					<span>Profile </span><span class="badge badge-danger">{{ session()->has('cart') ? count(session()->get('cart')):0 }}</span>
-				</a>
-				@else
-				<a href="{{ route('users.login.form') }}" class="nav-item nav-link" style="padding-left: 3.5rem;"><i class="fa fa-users"></i>
-					<span>Accounts</span>
-				</a>
-				@endif
+<div class="wrapper font-weight-lighter">
+	<header>
+		<nav>
+			<div class="menu-icon">
+				<i class="fa fa-bars fa-2x"></i>
 			</div>
-		</div>
-	</nav>
-	<div class="border" style="border-color: #16a085;background-color:#16a085;">
-		<!--  message -->
-		@if(session()->has('error'))
-		<p class="alert alert-danger">{{ session()->get('error') }}</p>
-		@endif
-		@if(session()->has('message'))
-		<p class="alert alert-danger">{{ session()->get('message') }}</p>
-		@endif
-		<!-- end -->
+			<div class="logo">
+				BGD Online Limited
+			</div>
+			<div class="menu text-capitalize">
+				<ul>
+					<li><a href="#">home</a></li>
+					<li><a href="#">product</a></li>
+					<li><a href="#">accessories</a></li>
+					@if(auth()->user())
+					<li><a href="{{ route('user.profile',auth()->user()->id) }}"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a></li>
+					@else
+					<li><a href="{{ route('users.login.form') }}">login</a></li>
+					@endif
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="content">
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</p>
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</p>
 	</div>
-</section>
+</div>
