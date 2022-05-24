@@ -1,28 +1,55 @@
-<section class="companyDescripton">
-    <div class="footerD">
-        <div class="support text-center">
-            <h4>SUPPORT</h4>
-            <div class="time">
-                <h5>Time: 10.00am to 06.00pm</h5>
-            </div>
-            <div class="contact">
-                <h5>Contact: 016........</h5>
-            </div>
-        </div>
-        <div class="about-us text-center">
-            <h4>ABOUT US </h4>
-            <a href="{{ route('user.refund.policy') }}">Refund Policy</a>
-            <a href="{{ route('user.terms.&.conditions') }}" class="ml-2">Terms & Condition</a>
-        </div>
-        <div class="stay-connected text-center">
-            <h4>STAY CONNECTED </h4>
-            <p>BGD online limited <br>
-                Phone : +88 019-72379494 <br>
-                Landline : : +88 02-8090528 <br>
-                Email : info@bgdonline.net <br>
-                Address : 820, Mamun Tower(8th floor),
-                Shewrapara, Mirpur, Dhaka-1216
-            </p>
-        </div>
-    </div>
+<section id="footer">
+	<div class="container">
+		<div class="row text-center text-xs-center text-sm-left text-md-left">
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				<h5>Quick links</h5>
+				<ul class="list-unstyled quick-links">
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				<h5>Quick links</h5>
+				<ul class="list-unstyled quick-links">
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4">
+				<h5>Quick links</h5>
+				<ul class="list-unstyled quick-links">
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+					<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+					<li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+				<ul class="list-unstyled list-inline social text-center">
+					<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-facebook"></i></a></li>
+					<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a></li>
+					<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-instagram"></i></a></li>
+					<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
+					<li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i class="fa fa-envelope"></i></a></li>
+				</ul>
+			</div>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+				<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+				<p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+			</div>
+			<hr>
+		</div>
+	</div>
 </section>
