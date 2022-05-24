@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
 /* Navbar */
 header {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background-image: url('/website/images/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,10 +14,7 @@ header {
 
 .content {
   width: 94%;
-  margin: 4em auto;
-  font-size: 20px;
-  line-height: 20px;
-  text-align: justify;
+  font-size: 1.3rem;
 }
 
 .logo {
@@ -26,18 +24,13 @@ header {
   margin: 16px 46px;
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 2px;
 }
-.logo img{
+
+.logo img {
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-nav {
-  position: fixed;
-  width: 100%;
-  line-height: 60px;
 }
 
 nav ul {
@@ -53,24 +46,30 @@ nav ul {
   transition: 1s;
 }
 
-nav.black ul {
-  background: #000;
+nav.green {
+  background: #16a085;
 }
 
 nav ul li {
   display: inline-block;
-  padding: 16px 40px;;
+  padding: 16px 40px;
+
 }
+
 nav ul li a {
   text-decoration: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+.menu {
+  margin-left: 50%;
 }
 
 .menu-icon {
   line-height: 60px;
   width: 100%;
-  background: #000;
+  background: #16a085;
   text-align: right;
   box-sizing: border-box;
   padding: 15px 24px;
@@ -80,41 +79,31 @@ nav ul li a {
 }
 
 @media(max-width: 786px) {
-
   .logo {
-        position: fixed;
-        top: 0;
-        margin-top: 16px;
-  }
-
-  nav ul {
-        max-height: 0px;
-        background: #000;
-  }
-
-  nav.black ul {
-        background: #000;
+    position: fixed;
+    margin-top: 16px;
   }
 
   .showing {
-        max-height: 34em;
+    max-height: 34em;
   }
 
   nav ul li {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 24px;
-        text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
   }
 
   .menu-icon {
-        display: block;
+    display: block;
   }
 }
+
 /* menu */
 .navbar .navbar-nav>a {
   color: #f5f6fa !important;
-  padding: 8px 15px;
+  padding: 8px 10px;
   font-size: 16px;
 }
 
@@ -127,6 +116,7 @@ nav ul li a {
   display: block;
   text-align: center;
 }
+
 @media (min-width: 1200px) {
   .form-inline .input-group {
     width: 350px;
@@ -180,6 +170,21 @@ nav ul li a {
   padding: 1%;
 }
 
+/* left-column */
+.left_column {
+  height: 500px;
+  width:300px;
+  border: 2px solid grey;
+  margin-left: 4%;
+}
+.left_column h4{
+  text-align: center;
+  margin-top: 10px;
+}
+.left_column a{
+  margin-top: 10px;
+}
+
 .card {
   margin: 2%;
   width: 100%;
@@ -198,8 +203,8 @@ nav ul li a {
 }
 
 .featured-Product .column {
-  height:20%;
-  width:20%;
+  height: 20%;
+  width: 20%;
   margin: 2%;
 }
 
@@ -224,17 +229,20 @@ nav ul li a {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
 /* all product button */
-.all_product_btn{
+.all_product_btn {
   background-color: #fff200;
   margin-left: 20%;
   margin-bottom: 2%;
 }
-.all_product_btn:hover{
+
+.all_product_btn:hover {
   background-color: #fffa65;
 }
-.all_product_btn a{
-    text-decoration: none;
+
+.all_product_btn a {
+  text-decoration: none;
 }
 
 /* Prodict-Details*/
@@ -334,11 +342,11 @@ nav ul li a {
 
   /* product-slider */
 
-   /* featured product */
+  /* featured product */
 
-   .featured-Product .column {
-    height:41%;
-    width:41%;
+  .featured-Product .column {
+    height: 41%;
+    width: 41%;
     margin: 4%;
   }
 
@@ -375,8 +383,8 @@ nav ul li a {
   /* featured product */
 
   .featured-Product .column {
-    height:40%;
-    width:40%;
+    height: 40%;
+    width: 40%;
     margin: 4%;
   }
 

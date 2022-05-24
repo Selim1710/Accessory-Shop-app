@@ -1,56 +1,31 @@
 @extends('website.master')
 @section('contents')
-<!-- carousel -->
-<section>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ ('website/images/t1.jpg') }}" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{{ ('website/images/t2.jpg') }}" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{{ ('website/images/t3.png') }}" alt="Third slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</section>
 <!-- All Categories -->
 <section class="border m-3">
     <h1 class="text-center p-2">All Categories</h1>
     <div class="d-flex">
-        <div class="left_column ml-4" style="height: 500px;border:2px solid grey;">
+        <div class="left_column">
             <!-- category >> brand -->
-            <h2 class=" text-center mt-2">
+            <h4>
                 Select Brand:
-            </h2>
-            <div class="category p-lg-1" id="category">
+            </h4>
+            <div class="category" id="category">
                 @foreach($categories as $category)
-                <div class="btn-group">
-                    <a href="#" class="btn dropdown-toggle m-1 text-uppercase" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ $category->category_name }}
-                    </a>
-                    @if(!empty($category->subCategories))
-                    <div class="dropdown-menu">
-                        @foreach($category->subCategories as $subCategory)
-                        <a class="dropdown-item" href="{{ route('show.sub.category.product',$subCategory->id) }}">{{ $subCategory->sub_category_name }}</a>
-                        @endforeach
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="btn btn-info btn-block text-uppercase" data-toggle="dropdown">
+                                {{ $category->category_name }}
+                            </a>
+                            @if(!empty($category->subCategories))
+                            <div class="dropdown-menu ml-3">
+                                @foreach($category->subCategories as $subCategory)
+                                <a class="dropdown-item" href="{{ route('show.sub.category.product',$subCategory->id) }}">{{ $subCategory->sub_category_name }}</a>
+                                @endforeach
+                            </div>
+                            @endif
+                        </div>
                     </div>
-                    @endif
                 </div>
                 @endforeach
             </div>
