@@ -15,8 +15,6 @@
                         <img class="img-fluid" src="http://az413908.vo.msecnd.net/99/photos/201708/1821/3132/6f5c6e85-61ac-41bf-abc9-03cff546f5dd.jpg?w=400" alt="Card image cap">
                         <button class="btn view-btn">SEDAN</button>
                         <div class="ribbon"><span>Popular</span></div>
-
-
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -76,12 +74,10 @@
     </div>
 </section>
 <!-- product -->
-<section class="all_product">
-
+<section class="all_product border border-secondary">
     <hr>
-
     <div class="container">
-        <h3 class="h3">shopping Demo-3 </h3>
+        <h3 class="h3">Our Product </h3>
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid3">
@@ -112,38 +108,20 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-    <hr>
-
-    <div class="container">
-        <h3 class="h3">shopping Demo-6 </h3>
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid6">
-                    <div class="product-image6">
-                        <a href="#">
-                            <img class="pic-1" src="{{ asset('website/images/t1.jpg') }}">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <div class="price">$11.00
-                            <span>$14.00</span>
-                        </div>
-                    </div>
-                    <ul class="social">
-                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-
 </section>
-
+<!-- content -->
+<section>
+    <div class="container">
+        <div class="content">
+            <article>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </article>
+            <article>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </article>
+        </div>
+    </div>
+</section>
 @endsection
