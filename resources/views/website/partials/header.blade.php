@@ -1,20 +1,37 @@
 <div class="first_nav">
    <div class="menu">
-      <div class="menu_item">
-         <a class="logo" href="#"><img src="{{ asset('website/images/logo.png') }}" alt="" class="w-50"></a>
+      <a href="#" class="mr-3 mt-3 mb-4 ml-4">
+         <div class="Logo mt-2 w-100 navbar-brand">
+            <img src="{{ asset('website/images/logo.png') }}" alt="" class="w-50">
+         </div>
+      </a>
+      <!-- search -->
+      <div class="container h-100 mt-4">
+         <div class="d-flex justify-content-center h-100">
+            <form action="#">
+            <div class="searchbar">
+               <input class="search_input" type="text" name="" placeholder="Search...">
+               <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+            </div>
+            </form>
+         </div>
       </div>
-      <div class="menu_item">
-         <h2><i class="fa fa-search"></i></h2>
-         <p>search</p>
-      </div>
-      <div class="menu_item">
-         <h2><i class="fa fa-heart"></i></h2>
-         <p>wish-list</p>
-      </div>
-      <div class="menu_item">
-         <h2><i class="fa fa-shopping-basket"></i></h2>
-         <p>add-to-cart</p>
-      </div>
+      <a href="#" class="mr-4">
+         <div class="menu_item d-flex">
+            <h5><i class="fa fa-heart fa-lg"></i></h5>
+            <div class="left_info">
+               <span class="badge badge-danger ml-1">0 items</span>
+            </div>
+         </div>
+      </a>
+      <a href="#" class="mr-4">
+         <div class="menu_item d-flex">
+            <i class="fa fa-shopping-basket fa-lg"></i>
+            <div class="left_info">
+               <span class="badge badge-secondary ml-1">0 items</span>
+            </div>
+         </div>
+      </a>
    </div>
 </div>
 

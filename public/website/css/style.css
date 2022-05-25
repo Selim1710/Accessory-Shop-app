@@ -6,20 +6,74 @@
 
 /*********************** navbar ************************/
 .first_nav {
-    margin-top: 0 !important;
     text-align: center;
-}
-
-.first_nav .menu_item img {
-    width: 50%;
 }
 
 .menu {
     display: flex;
 }
 
-.menu_item {
-    margin: 0 8%;
+.menu a {
+    text-decoration: none;
+}
+.menu .menu_item{
+    margin-top: 40%;
+}
+
+.menu .menu_item i{
+    color:grey;
+
+}
+
+/* search */
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.search_input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover>.search_input {
+    padding: 0 10px;
+    width: 450px;
+    caret-color: red;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover>.search_icon {
+    background: white;
+    color: #e74c3c;
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+}
+
+/* end search */
+
+.menu_item .left_info {
+    display: block;
     float: left;
 }
 
@@ -31,11 +85,13 @@
 #Fixed_second_nav {
     overflow: hidden;
 }
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+    z-index: 999;
+}
 
 @media only screen and (max-width:886px) {
     .first_nav .menu_item img {
@@ -52,19 +108,23 @@
     }
 }
 
+/*********************** carousel ************************/
+
 
 /*********************** category ************************/
-.section_header{
-    color:#eeeeee;
-    background-color: #007b5e;
-    padding:1%;
+.section_header {
+    color: #eeeeee;
+    background-color: #ff3f34;
+    padding: 1%;
     margin-bottom: 2%;
     border-radius: 10px;
     text-align: center;
 }
-.all_categories h1{
+
+.all_categories h1 {
     margin-bottom: 2%;
 }
+
 .ribbon {
     position: absolute;
     right: -5px;
