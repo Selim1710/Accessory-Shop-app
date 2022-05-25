@@ -4,13 +4,16 @@
     font-family: "Helvetica Neue", sans-serif;
 }
 
-/* navbar */
-.first_nav{
+/*********************** navbar ************************/
+.first_nav {
     margin-top: 0 !important;
+    text-align: center;
 }
-.first_nav .menu_item img{
-    width:50%;
+
+.first_nav .menu_item img {
+    width: 50%;
 }
+
 .menu {
     display: flex;
 }
@@ -21,12 +24,47 @@
 }
 
 .nav-item {
-    margin: 0 4%;
+    margin: 0 30%;
 }
 
-/* end navbar */
+/* sticky navbar */
+#Fixed_second_nav {
+    overflow: hidden;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
-/* category start */
+@media only screen and (max-width:886px) {
+    .first_nav .menu_item img {
+        width: 100%;
+    }
+
+    .menu {
+        display: inline-block;
+    }
+
+    .menu_item {
+        margin: 2% 7%;
+        float: left;
+    }
+}
+
+
+/*********************** category ************************/
+.section_header{
+    color:#eeeeee;
+    background-color: #007b5e;
+    padding:1%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    text-align: center;
+}
+.all_categories h1{
+    margin-bottom: 2%;
+}
 .ribbon {
     position: absolute;
     right: -5px;
@@ -104,17 +142,9 @@
     box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
 }
 
-/* end category */
 
-/* product start */
-h3.h3 {
-    text-align: center;
-    margin: 1em;
-    text-transform: capitalize;
-    font-size: 1.7em;
-}
+/*********************** product ************************/
 
-/********************* Our product **********************/
 .product-grid3 {
     font-family: Roboto, sans-serif;
     text-align: center;
@@ -309,9 +339,8 @@ h3.h3 {
     }
 }
 
-/* end product */
+/*********************** footer ************************/
 
-/* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 section {

@@ -1,12 +1,42 @@
 @extends('website.master')
 @section('contents')
-<!-- category -->
-<section class="all_categories">
+<!-- slider -->
+<section class="image_slider border">
     <div class="container">
-        <div class="text-center m-3">
-            <h1>Our Categories</h1>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{ asset('website/images/t1.jpg') }}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ asset('website/images/t2.jpg') }}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ asset('website/images/t3.png') }}" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-
+    </div>
+</section>
+<!-- category -->
+<section class="all_categories border">
+    <div class="section_header">
+        <h3>Our Categories</h3>
+    </div>
+    <div class="container">
         <div class="container-fluid" id="inventory">
             <div class="row">
                 <div class="col-md-3">
@@ -63,7 +93,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card">
-                        <img class="img-fluid" src="http://az413908.vo.msecnd.net/99/photos/201809/2121/3627/2e41e90c-377b-430e-92ed-5db9b1331f19.jpg?w=400" alt="Card image cap">
+                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
                         <button class="btn  view-btn">MINIVAN</button>
                     </div>
                 </div>
@@ -74,11 +104,13 @@
     </div>
 </section>
 <!-- product -->
-<section class="all_product border border-secondary">
-    <hr>
+<section class="all_product border">
+    <div class="section_header">
+    <h3>Our Product </h3>
+    </div>
     <div class="container">
-        <h3 class="h3">Our Product </h3>
         <div class="row">
+
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid3">
                     <div class="product-image3">
@@ -87,7 +119,7 @@
                             <img class="pic-2" src="{{ asset('website/images/t1.jpg') }}">
                         </a>
                         <ul class="social">
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
                             <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                         </ul>
                         <span class="product-new-label">New</span>
@@ -108,6 +140,8 @@
                     </div>
                 </div>
             </div>
+            <!-- new -->
+
         </div>
     </div>
 </section>
