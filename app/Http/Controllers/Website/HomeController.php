@@ -11,11 +11,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-
     public function home()
     {
-        $categories = Category::with('subCategories')->get();
-        $products = Product::with('subCategory')->orderBy('id','DESC')->paginate(8);
+        $categories = Category::with('brand')->get();
+        $products = Product::with('brand')->orderBy('id','DESC')->paginate(8);
         return view('website.layouts.home', compact('categories', 'products'));
     }
     public function search(Request $request)

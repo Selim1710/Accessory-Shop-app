@@ -46,10 +46,10 @@ class CreateProductsTable extends Migration
             // warranty
             $table->string('manufacturing_warranty');
 
-            $table->unsignedBigInteger('subCategory_id')->default();
-            $table->foreign('subCategory_id')
+            $table->unsignedBigInteger('brand_id')->default();
+            $table->foreign('brand_id')
                 ->references('id')
-                ->on('subcategories')
+                ->on('brands')
                 ->onDelete('cascade');
 
             $table->timestamps();

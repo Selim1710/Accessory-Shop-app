@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
 use App\Models\Product;
@@ -11,13 +12,13 @@ class ProductController extends Controller
 {
     public function manageProduct()
     {
-        $products = Product::with('subCategory')->orderBy('id','desc')->get();
+        $products = Product::with('brand')->orderBy('id','desc')->get();
         return view('admin.layouts.product.product_table', compact('products'));
     }
     public function add()
     {
-        $products = Subcategory::with('product')->get();
-        return view('admin.layouts.product.add_product', compact('products'));
+        $brands = Brand::with('product')->get();
+        return view('admin.layouts.product.add_product', compact('brands'));
     }
     public function store(Request $request)
     {
@@ -27,7 +28,7 @@ class ProductController extends Controller
             'regular_price' => 'required',
             'product_image' => 'required|mimes:jpg,png,jpeg|max:5048',
             'product_offer' => 'required',
-            'subCategory_id' => 'required',
+            'brand_id' => 'required',
             'product_description' => 'required',
             // specifications
             'processor' => 'required',
@@ -92,7 +93,7 @@ class ProductController extends Controller
             'colors' => $request->colors,
             'manufacturing_warranty' => $request->manufacturing_warranty,
 
-            'subCategory_id' => $request->subCategory_id,
+            'brand_id' => $request->brand_id,
         ]);
         return redirect()->route('admin.manage.product')->with('message', 'Product added successfully');
     }

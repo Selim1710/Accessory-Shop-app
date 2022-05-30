@@ -103,12 +103,52 @@
                         <div class="ribbon"><span>Popular</span></div>
                     </div>
                 </div>
+                <!-- new -->
+                <div class="col-md-3 col-lg-3">
+                    <div class="my_card">
+                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
+                        <button class="btn view-btn w-100">SEDAN</button>
+                        <div class="ribbon"><span>Popular</span></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="my_card">
+                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
+                        <button class="btn view-btn w-100">SEDAN</button>
+                        <div class="ribbon"><span>Popular</span></div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="my_card">
+                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
+                        <button class="btn view-btn w-100">SEDAN</button>
+                        <div class="ribbon"><span>Popular</span></div>
+                    </div>
+                </div>
+                
 
             </div>
             <!-- not popular -->
-            <div class="row mt-5">
+            <div class="row mt-2">
 
                 <div class="col-md-3">
+                    <div class="my_card">
+                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
+                        <button class="btn  view-btn w-100">MINIVAN</button>
+                    </div>
+                </div>
+                <!-- new -->
+                <div class="col-md-3">
+                    <div class="my_card">
+                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
+                        <button class="btn  view-btn w-100">MINIVAN</button>
+                    </div>
+                </div><div class="col-md-3">
+                    <div class="my_card">
+                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
+                        <button class="btn  view-btn w-100">MINIVAN</button>
+                    </div>
+                </div><div class="col-md-3">
                     <div class="my_card">
                         <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
                         <button class="btn  view-btn w-100">MINIVAN</button>
@@ -136,7 +176,7 @@
             <h4 id="burgundy">Filters</h4>
         </div>
         <div class="py-2 border-bottom ml-3">
-            <h6 class="font-weight-bold">Categories</h6>
+            <h6 class="font-weight-bold">Brands</h6>
             <div id="orange"><span class="fa fa-minus"></span></div>
             <form>
                 <div class="form-group"> <input type="checkbox" id="artisan"> <label for="artisan">Fresh Artisan Breads</label> </div>
@@ -152,7 +192,7 @@
             <h4 id="burgundy">Filters</h4>
         </div>
         <div class="py-2 border-bottom ml-3">
-            <h6 class="font-weight-bold">Categories</h6>
+            <h6 class="font-weight-bold">Brands</h6>
             <div id="orange"><span class="fa fa-minus"></span></div>
             <form>
                 <div class="form-group"> <input type="checkbox" id="artisan"> <label for="artisan">Fresh Artisan Breads</label> </div>
@@ -189,7 +229,67 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- new -->
+                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
+                    <div class="card">
+                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                        <div class="card-body">
+                            <h5><b>Multi Grain Bread</b> </h5>
+                            <div class="d-flex flex-row my-2">
+                                <div class="text-muted">₹110/loaf</div>
+                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
+                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
+                    <div class="card">
+                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                        <div class="card-body">
+                            <h5><b>Multi Grain Bread</b> </h5>
+                            <div class="d-flex flex-row my-2">
+                                <div class="text-muted">₹110/loaf</div>
+                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
+                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
+                    <div class="card">
+                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                        <div class="card-body">
+                            <h5><b>Multi Grain Bread</b> </h5>
+                            <div class="d-flex flex-row my-2">
+                                <div class="text-muted">₹110/loaf</div>
+                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
+                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
+                    <div class="card">
+                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                        <div class="card-body">
+                            <h5><b>Multi Grain Bread</b> </h5>
+                            <div class="d-flex flex-row my-2">
+                                <div class="text-muted">₹110/loaf</div>
+                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
+                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
+                    <div class="card">
+                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                        <div class="card-body">
+                            <h5><b>Multi Grain Bread</b> </h5>
+                            <div class="d-flex flex-row my-2">
+                                <div class="text-muted">₹110/loaf</div>
+                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
+                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

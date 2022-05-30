@@ -4,10 +4,9 @@ use App\Http\Controllers\Backend\AdminLoginController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\DashBoardController;
-use App\Http\Controllers\Backend\LaptopDealsController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\StockController;
-use App\Http\Controllers\Backend\SubCategoryController;
+use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\ManageOrderController;
 use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Website\CartController;
@@ -32,7 +31,7 @@ Route::group(['prefix' => 'website'], function () {
     Route::get('/view/all/product', [HomeController::class, 'allProduct'])->name('website.all.product');
 
     // see all categories
-    Route::get('/show/sub/category/product/{id}', [HomeController::class, 'subCategoryProduct'])->name('show.sub.category.product');
+    Route::get('/show/sub/category/product/{id}', [HomeController::class, 'BrandProduct'])->name('show.sub.category.product');
 
     // featured categories
     Route::get('/show/category/product/{id}', [HomeController::class, 'categoryProduct'])->name('show.category.product');
@@ -101,13 +100,13 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/view/category/image/{id}', [CategoryController::class, 'view'])->name('admin.view.category');
         Route::post('/change/category/image/{id}', [CategoryController::class, 'change'])->name('admin.change.category.image');
 
-        // Sub-Category
-        Route::get('/manage/subCategory', [SubCategoryController::class, 'manageSubCategory'])->name('admin.manage.subCategory');
-        Route::get('/add/subCategory', [SubCategoryController::class, 'addSubCategory'])->name('admin.add.subCategory');
-        Route::post('/store/subCategory', [SubCategoryController::class, 'store'])->name('admin.store.subCategory');
-        Route::get('/edit/subCategory/{id}', [SubCategoryController::class, 'edit'])->name('admin.edit.subCategory');
-        Route::post('/update/subCategory/{id}', [SubCategoryController::class, 'update'])->name('admin.update.subCategory');
-        Route::get('/delete/subCategory/{id}', [SubCategoryController::class, 'delete'])->name('admin.delete.subCategory');
+        // Brand
+        Route::get('/manage/Brand', [BrandController::class, 'manageBrand'])->name('admin.manage.brand');
+        Route::get('/add/Brand', [BrandController::class, 'addBrand'])->name('admin.add.brand');
+        Route::post('/store/Brand', [BrandController::class, 'store'])->name('admin.store.brand');
+        Route::get('/edit/Brand/{id}', [BrandController::class, 'edit'])->name('admin.edit.brand');
+        Route::post('/update/Brand/{id}', [BrandController::class, 'update'])->name('admin.update.brand');
+        Route::get('/delete/Brand/{id}', [BrandController::class, 'delete'])->name('admin.delete.brand');
 
         // Product
         Route::get('/manage/product', [ProductController::class, 'manageProduct'])->name('admin.manage.product');

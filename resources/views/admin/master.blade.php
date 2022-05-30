@@ -48,7 +48,7 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="{{ route('admin.manage.category') }}">Category</a>
-                                <a class="nav-link" href="{{ route('admin.manage.subCategory') }}">Sub-Category</a>
+                                <a class="nav-link" href="{{ route('admin.manage.brand') }}">Brand</a>
                                 <a class="nav-link" href="{{ route('admin.manage.product') }}">Product</a>
                                 <a class="nav-link" href="{{ route('admin.manage.stock') }}">Stock</a>
                             </nav>

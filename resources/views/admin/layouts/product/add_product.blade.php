@@ -17,10 +17,10 @@
     <form action="{{ route('admin.store.product') }}" method="POST" enctype="multipart/form-data" class="text-capitalize">
         @csrf
         <div class="form-group">
-            <label for="sc1">Sub-Category</label>
-            <select class="form-control" id="sc1" name="subCategory_id">
-                @foreach($products as $product)
-                <option value="{{ $product->id }}">{{ $product->sub_category_name }}</option>
+            <label for="sc1">Brand</label>
+            <select class="form-control" id="sc1" name="brand_id">
+                @foreach($brands as $brand)
+                <option value="{{ $brand->id }}">{{ $brand->brand_name }}</option>
                 @endforeach
             </select>
         </div>
