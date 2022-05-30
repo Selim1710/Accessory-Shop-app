@@ -4,6 +4,21 @@
     font-family: "Helvetica Neue", sans-serif;
 }
 
+.section_header {
+    color: #d63031;
+    text-align: center;
+    padding: 4% 1% 0% 1%;
+    font-weight: bold;
+    text-shadow: 2px 2px #ff7675;
+}
+
+.section_des {
+    color: #636e72;
+    text-align: center;
+    padding-bottom: 4%;
+    font-style: italic;
+}
+
 /*********************** navbar ************************/
 .first_nav {
     text-align: center;
@@ -108,17 +123,8 @@
 
 
 /*********************** category ************************/
-.section_header {
-    color: #eeeeee;
-    background-color: #ff3f34;
-    padding: 1%;
-    margin-bottom: 2%;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.all_categories h1 {
-    margin-bottom: 2%;
+.all_categories {
+    background-color: #dfe6e9;
 }
 
 .my_card {
@@ -246,9 +252,10 @@ label {
     position: absolute;
     top: 2%;
 }
+
 .clearfix {
     overflow: auto;
-  }
+}
 
 @media(min-width:1200px) {
 
@@ -268,11 +275,12 @@ label {
         margin: 0;
         float: right;
     }
+
     .clearfix::after {
         content: "";
         clear: both;
         display: table;
-      }
+    }
 
     .card {
         width: 300px;
@@ -432,9 +440,9 @@ label {
 /* card details start  */
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:400,400i,700,700i');
 
-.service h2{
+.service {
     text-align: center;
-    background-color: #1ABC9C;
+    margin-top: 3%;
 }
 
 .card_content {

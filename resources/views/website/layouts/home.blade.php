@@ -87,8 +87,9 @@
 <!-- category -->
 <section class="all_categories">
     <div class="container">
-        <div class="section_header">
-            <h5>Our Categories</h5>
+        <div>
+            <h1 class="section_header">Categories</h1>
+            <p class="section_des">click on categories and find your product !</p>
         </div>
     </div>
     <div class="container">
@@ -121,8 +122,9 @@
 </section>
 <!-- product -->
 <div class="container">
-    <div class="section_header">
-        <h5>Our Product</h5>
+    <div>
+        <h1 class="section_header">Just For You</h1>
+        <p class="section_des">Get your desire product from our website !</p>
     </div>
 </div>
 <section class="All_product clearfix">
@@ -175,7 +177,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1">
+                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
                     <div class="card">
                         <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
                         <div class="card-body">
@@ -183,23 +185,27 @@
                             <div class="d-flex flex-row my-2">
                                 <div class="text-muted">₹110/loaf</div>
                                 <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
-                            </div> <button class="btn btn-warning w-100 rounded my-2">Add to cart</button>
+                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
                         </div>
                     </div>
                 </div>
-                <!-- new -->
+
             </div>
         </div>
     </div>
 </section>
 <!-- Services -->
 <section class="service">
-    <h2>
-        Our Services
-    </h2>
+    <div>
+        <h2 class="section_header">
+            Our Services
+        </h2>
+        <p class="section_des">We Offer a wide range of services.</p>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+
+            <div class="col-lg-4 mt-2 mb-2">
                 <div class="card_content">
                     <div class="card_img">
                         <img src="https://placeimg.com/380/230/nature" alt="">
@@ -215,38 +221,88 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <!-- new -->
+            <div class="col-lg-4 mt-2 mb-2">
                 <div class="card_content">
                     <div class="card_img">
-                        <img src="https://placeimg.com/380/230/animals" alt="">
+                        <img src="https://placeimg.com/380/230/nature" alt="">
                         <span>
-                            <h4>heading2</h4>
+                            <h4>heading</h4>
                         </span>
                     </div>
                     <div class="card_desc">
-                        <h3>Heading2</h3>
+                        <h3>Heading</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
                             voluptas totam</p>
                         <a href="#" class="btn_card">Read</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 mt-2 mb-2">
                 <div class="card_content">
                     <div class="card_img">
-                        <img src="https://placeimg.com/380/230/tech" alt="">
+                        <img src="https://placeimg.com/380/230/nature" alt="">
                         <span>
-                            <h4>heading3</h4>
+                            <h4>heading</h4>
                         </span>
                     </div>
                     <div class="card_desc">
-                        <h3>Heading3</h3>
+                        <h3>Heading</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
                             voluptas totam</p>
                         <a href="#" class="btn_card">Read</a>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 mt-2 mb-2">
+                <div class="card_content">
+                    <div class="card_img">
+                        <img src="https://placeimg.com/380/230/nature" alt="">
+                        <span>
+                            <h4>heading</h4>
+                        </span>
+                    </div>
+                    <div class="card_desc">
+                        <h3>Heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+                        <a href="#" class="btn_card">Read</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-2 mb-2">
+                <div class="card_content">
+                    <div class="card_img">
+                        <img src="https://placeimg.com/380/230/nature" alt="">
+                        <span>
+                            <h4>heading</h4>
+                        </span>
+                    </div>
+                    <div class="card_desc">
+                        <h3>Heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+                        <a href="#" class="btn_card">Read</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-2 mb-2">
+                <div class="card_content">
+                    <div class="card_img">
+                        <img src="https://placeimg.com/380/230/nature" alt="">
+                        <span>
+                            <h4>heading</h4>
+                        </span>
+                    </div>
+                    <div class="card_desc">
+                        <h3>Heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+                        <a href="#" class="btn_card">Read</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
