@@ -103,30 +103,7 @@
                         <div class="ribbon"><span>Popular</span></div>
                     </div>
                 </div>
-                <!-- new -->
-                <div class="col-md-3 col-lg-3">
-                    <div class="my_card">
-                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
-                        <button class="btn view-btn w-100">SEDAN</button>
-                        <div class="ribbon"><span>Popular</span></div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                    <div class="my_card">
-                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
-                        <button class="btn view-btn w-100">SEDAN</button>
-                        <div class="ribbon"><span>Popular</span></div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                    <div class="my_card">
-                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
-                        <button class="btn view-btn w-100">SEDAN</button>
-                        <div class="ribbon"><span>Popular</span></div>
-                    </div>
-                </div>
                 
-
             </div>
             <!-- not popular -->
             <div class="row mt-2">
@@ -137,23 +114,7 @@
                         <button class="btn  view-btn w-100">MINIVAN</button>
                     </div>
                 </div>
-                <!-- new -->
-                <div class="col-md-3">
-                    <div class="my_card">
-                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
-                        <button class="btn  view-btn w-100">MINIVAN</button>
-                    </div>
-                </div><div class="col-md-3">
-                    <div class="my_card">
-                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
-                        <button class="btn  view-btn w-100">MINIVAN</button>
-                    </div>
-                </div><div class="col-md-3">
-                    <div class="my_card">
-                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
-                        <button class="btn  view-btn w-100">MINIVAN</button>
-                    </div>
-                </div>
+                
 
             </div>
         </div>
@@ -217,6 +178,7 @@
                 </div>
             </div>
             <div class="row">
+
                 <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
                     <div class="card">
                         <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
@@ -229,67 +191,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- new -->
-                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
-                    <div class="card">
-                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-                        <div class="card-body">
-                            <h5><b>Multi Grain Bread</b> </h5>
-                            <div class="d-flex flex-row my-2">
-                                <div class="text-muted">₹110/loaf</div>
-                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
-                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
-                    <div class="card">
-                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-                        <div class="card-body">
-                            <h5><b>Multi Grain Bread</b> </h5>
-                            <div class="d-flex flex-row my-2">
-                                <div class="text-muted">₹110/loaf</div>
-                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
-                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
-                    <div class="card">
-                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-                        <div class="card-body">
-                            <h5><b>Multi Grain Bread</b> </h5>
-                            <div class="d-flex flex-row my-2">
-                                <div class="text-muted">₹110/loaf</div>
-                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
-                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
-                    <div class="card">
-                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-                        <div class="card-body">
-                            <h5><b>Multi Grain Bread</b> </h5>
-                            <div class="d-flex flex-row my-2">
-                                <div class="text-muted">₹110/loaf</div>
-                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
-                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
-                    <div class="card">
-                        <img class="card-img-top" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
-                        <div class="card-body">
-                            <h5><b>Multi Grain Bread</b> </h5>
-                            <div class="d-flex flex-row my-2">
-                                <div class="text-muted">₹110/loaf</div>
-                                <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
-                            </div> <button class="btn btn-warning w-100 rounded mb-2">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -321,88 +223,7 @@
                     </div>
                 </div>
             </div>
-            <!-- new -->
-            <div class="col-lg-4 mt-2 mb-2">
-                <div class="card_content">
-                    <div class="card_img">
-                        <img src="https://placeimg.com/380/230/nature" alt="">
-                        <span>
-                            <h4>heading</h4>
-                        </span>
-                    </div>
-                    <div class="card_desc">
-                        <h3>Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
-                            voluptas totam</p>
-                        <a href="#" class="btn_card">Read</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mt-2 mb-2">
-                <div class="card_content">
-                    <div class="card_img">
-                        <img src="https://placeimg.com/380/230/nature" alt="">
-                        <span>
-                            <h4>heading</h4>
-                        </span>
-                    </div>
-                    <div class="card_desc">
-                        <h3>Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
-                            voluptas totam</p>
-                        <a href="#" class="btn_card">Read</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mt-2 mb-2">
-                <div class="card_content">
-                    <div class="card_img">
-                        <img src="https://placeimg.com/380/230/nature" alt="">
-                        <span>
-                            <h4>heading</h4>
-                        </span>
-                    </div>
-                    <div class="card_desc">
-                        <h3>Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
-                            voluptas totam</p>
-                        <a href="#" class="btn_card">Read</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mt-2 mb-2">
-                <div class="card_content">
-                    <div class="card_img">
-                        <img src="https://placeimg.com/380/230/nature" alt="">
-                        <span>
-                            <h4>heading</h4>
-                        </span>
-                    </div>
-                    <div class="card_desc">
-                        <h3>Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
-                            voluptas totam</p>
-                        <a href="#" class="btn_card">Read</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mt-2 mb-2">
-                <div class="card_content">
-                    <div class="card_img">
-                        <img src="https://placeimg.com/380/230/nature" alt="">
-                        <span>
-                            <h4>heading</h4>
-                        </span>
-                    </div>
-                    <div class="card_desc">
-                        <h3>Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
-                            voluptas totam</p>
-                        <a href="#" class="btn_card">Read</a>
-                    </div>
-                </div>
-            </div>
-
+            
         </div>
     </div>
 </section>

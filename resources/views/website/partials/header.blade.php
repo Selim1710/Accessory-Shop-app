@@ -1,8 +1,10 @@
 <div class="first_nav">
    <div class="menu">
-      <a href="#" class="mr-3 mt-3 mb-4 ml-4">
-         <div class="Logo mt-2 w-100 navbar-brand">
-            <img src="{{ asset('website/images/logo.png') }}" alt="" class="w-50">
+      <!-- logo -->
+      <a href="#">
+         <div class="Logo m-2">
+            <img src="{{ asset('website/images/logo.jpg') }}" alt="" class="img-fluid w-25">
+            <h2 class="navbar-brand">Accessory Shop</h2>
          </div>
       </a>
       <!-- search -->

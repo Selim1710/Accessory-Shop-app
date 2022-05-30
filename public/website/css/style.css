@@ -19,6 +19,16 @@
     font-style: italic;
 }
 
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 /*********************** navbar ************************/
 .first_nav {
     text-align: center;
@@ -253,9 +263,6 @@ label {
     top: 2%;
 }
 
-.clearfix {
-    overflow: auto;
-}
 
 @media(min-width:1200px) {
 
@@ -276,11 +283,7 @@ label {
         float: right;
     }
 
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
+
 
     .card {
         width: 300px;
