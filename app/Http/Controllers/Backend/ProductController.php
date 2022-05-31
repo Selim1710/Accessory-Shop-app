@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Brand;
-use App\Models\Subcategory;
 use Illuminate\Http\Request;
 use App\Models\Product;
 

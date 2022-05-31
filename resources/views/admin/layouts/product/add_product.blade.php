@@ -95,7 +95,7 @@
             <input type="text" name="wheel" class="form-control" id="wheel" required>
         </div>
         <div class="form-group">
-            <label for="top_speed"> optical drive</label>
+            <label for="top_speed"> top speed</label>
             <input type="text" name="top_speed" class="form-control" id="top_speed" required>
         </div>
         <div class="form-group">

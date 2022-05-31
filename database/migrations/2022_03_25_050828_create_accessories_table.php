@@ -25,11 +25,12 @@ class CreateAccessoriesTable extends Migration
             $table->string('metarials');
             $table->string('certification');
             $table->string('color');
+            $table->string('size');
             $table->string('warranty');
 
             ////////////// Relations //////////////
 
-            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('product_id')->nullable();
             $table->foreign('product_id')
                 ->references('id')
                 ->on('products')

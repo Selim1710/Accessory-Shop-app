@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AccessoryController;
 use App\Http\Controllers\Backend\AdminLoginController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CustomerController;
@@ -126,6 +127,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/update/stock/{id}', [StockController::class, 'update'])->name('admin.update.stock');
         Route::get('/delete/stock/{id}', [StockController::class, 'delete'])->name('admin.delete.stock');
 
+          // accessory
+          Route::get('/manage/accessory', [AccessoryController::class, 'manageAccessory'])->name('admin.manage.accessory');
+          Route::get('/add/accessory', [AccessoryController::class, 'add'])->name('admin.add.accessory');
+          Route::post('/store/accessory', [AccessoryController::class, 'store'])->name('admin.store.accessory');
+          Route::get('/edit/accessory/{id}', [AccessoryController::class, 'edit'])->name('admin.edit.accessory');
+          Route::post('/update/accessory/{id}', [AccessoryController::class, 'update'])->name('admin.update.accessory');
+          Route::get('/delete/accessory/{id}', [AccessoryController::class, 'delete'])->name('admin.delete.accessory');
+          Route::get('/view/accessory/image/{id}', [AccessoryController::class, 'view'])->name('admin.view.accessory');
+          Route::post('/change/accessory/image/{id}', [AccessoryController::class, 'change'])->name('admin.change.accessory.image');
+  
         // Order List
         Route::get('/manage/order', [ManageOrderController::class, 'manageOrder'])->name('admin.manage.order');
         Route::get('/accept/order/{id}', [ManageOrderController::class, 'acceptOrder'])->name('admin.accept.order');

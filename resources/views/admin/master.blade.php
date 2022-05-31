@@ -51,6 +51,8 @@
                                 <a class="nav-link" href="{{ route('admin.manage.brand') }}">Brand</a>
                                 <a class="nav-link" href="{{ route('admin.manage.product') }}">Product</a>
                                 <a class="nav-link" href="{{ route('admin.manage.stock') }}">Stock</a>
+                                <a class="nav-link" href="{{ route('admin.manage.accessory') }}">Accessory</a>
+
                             </nav>
                         </div>
                         <!-- table -->
