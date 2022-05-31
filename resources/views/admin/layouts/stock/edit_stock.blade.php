@@ -7,7 +7,7 @@
             <label for="exampleFormControlInput1">Total Produce</label>
             <input type="number" name="total_produce" value="{{ $stock->total_produce }}" class="form-control" id="exampleFormControlInput1" placeholder="Enter quantity" required>
         </div>
-        <button type="submit" class="btn btn-primary">Submit Now</button>
+        <button type="submit" class="btn btn-info w-100">Submit Now</button>
     </form>
 </div>
 @endsection

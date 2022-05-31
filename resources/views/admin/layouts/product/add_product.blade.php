@@ -141,7 +141,7 @@
             <input type="text" name="warranty" class="form-control" id="warranty" required>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit Now</button>
+        <button type="submit" class="btn btn-primary w-100">Submit Now</button>
     </form>
 </div>
 @endsection

@@ -100,8 +100,9 @@ class AccessoryController extends Controller
         if (is_file($image)) {
             unlink($image);
             $accessory->delete();
-            return redirect()->route('admin.manage.Accessory')->with('error', 'Accessory deleted');
+            return redirect()->route('admin.manage.accessory')->with('error', 'Accessory deleted');
         } else {
+            $accessory->delete();
             return redirect()->back()->with('error', 'File Not found');
         }
     }

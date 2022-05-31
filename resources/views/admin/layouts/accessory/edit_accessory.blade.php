@@ -68,7 +68,7 @@
             <input type="number" name="warranty" value="{{ $accessory->warranty }}" class="form-control" id="warranty" required>
         </div>
 
-        <button type="submit" class="btn btn-primary w-100">Submit Now</button>
+        <button type="submit" class="btn btn-info w-100">Submit Now</button>
     </form>
 </div>
 @endsection

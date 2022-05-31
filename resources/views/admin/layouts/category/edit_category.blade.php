@@ -7,7 +7,7 @@
             <label for="c_n1">Category Name</label>
             <input type="text" name="category_name" value="{{ $category->category_name }}" class="form-control" id="c_n1" placeholder="Enter Category Name" required>
         </div>
-        <button type="submit" class="btn btn-primary">Update Now</button>
+        <button type="submit" class="btn btn-info w-100">Update Now</button>
 
     </form>
 </div>

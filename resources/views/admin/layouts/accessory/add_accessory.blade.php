@@ -19,7 +19,8 @@
         <div class="form-group">
             <label for="sc1">select product</label>
             <select class="form-control" id="sc1" name="product_id">
-                <option value="">--select--</option>
+                <option value=""> -- Select -- </option>
+                <option value="">No Product</option>
                 @foreach($products as $product)
                 <option value="{{ $product->id }}">{{ $product->name }}</option>
                 @endforeach
