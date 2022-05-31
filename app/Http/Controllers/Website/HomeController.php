@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Website;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
-use App\Models\Stock;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
@@ -14,6 +13,7 @@ class HomeController extends Controller
     public function home()
     {
         $categories = Category::with('brand')->get();
+        // return $categories;
         $products = Product::with('brand')->orderBy('id','DESC')->paginate(8);
         return view('website.layouts.home', compact('categories', 'products'));
     }

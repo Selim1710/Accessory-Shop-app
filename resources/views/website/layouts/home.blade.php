@@ -95,27 +95,17 @@
     <div class="container">
         <div class="container-fluid" id="inventory">
             <div class="row">
-                <!-- popular -->
+                @foreach($categories as $category)
                 <div class="col-md-3 col-lg-3">
                     <div class="my_card">
-                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
-                        <button class="btn view-btn w-100">SEDAN</button>
+                        <img class="img-fluid" src="{{ asset('uploads/category/'.$category->image) }}" alt="Card image cap">
+                        <button class="btn view-btn w-100">{{ $category->category_name }}</button>
+                        @if($loop->first)
                         <div class="ribbon"><span>Popular</span></div>
+                        @endif
                     </div>
                 </div>
-                
-            </div>
-            <!-- not popular -->
-            <div class="row mt-2">
-
-                <div class="col-md-3">
-                    <div class="my_card">
-                        <img class="img-fluid" src="{{ asset('website/images/t1.jpg') }}" alt="Card image cap">
-                        <button class="btn  view-btn w-100">MINIVAN</button>
-                    </div>
-                </div>
-                
-
+                @endforeach
             </div>
         </div>
         <br><br>
@@ -191,7 +181,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -223,7 +213,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>
