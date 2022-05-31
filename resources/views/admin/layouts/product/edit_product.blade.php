@@ -1,134 +1,140 @@
 @extends('admin.master')
 @section('contents')
 <div class="myform">
-    <form action="{{ route('admin.update.product',$product->id) }}" method="post">
+    <!-- Validation Error Message -->
+    <div class="message">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+    </div>
+
+    <form action="{{ route('admin.update.product',$product->id) }}" method="POST" class="text-capitalize">
         @csrf
         <div class="form-group">
             <label for="m1">Model</label>
-            <input type="text" name="model" value="{{ $product->model }}" class="form-control" id="m1" placeholder="Enter product model" required>
+            <input type="text" name="model" value="{{ $product->model }}" class="form-control" id="m1" required>
         </div>
         <div class="form-group">
-            <label for="pn1">Product Name</label>
-            <input type="text" name="product_name" value="{{ $product->product_name }}" class="form-control" id="pn1" placeholder="Enter product name" required>
+            <label for="pn1">Name</label>
+            <input type="text" name="name" value="{{ $product->name }}" class="form-control" id="pn1" required>
         </div>
         <div class="form-group">
-            <label for="rp1"> Regular Price</label>
-            <input type="number" name="regular_price" value="{{ $product->regular_price }}" class="form-control" id="rp1" placeholder="Enter product price" required>
+            <label for="rp1"> Price</label>
+            <input type="number" name="price" value="{{ $product->price }}" class="form-control" id="rp1" required>
         </div>
         <div class="form-group">
             <label for="o1">Offer</label>
-            <input type="number" name="product_offer" value="{{ $product->product_offer }}" class="form-control" id="o1" placeholder="Enter product offer(if don't enter 0)" required>
+            <input type="number" name="offer" value="{{ $product->offer }}" class="form-control" id="o1" required>
         </div>
         <div class="form-group">
             <label for="pd1">Product Description</label>
-            <textarea name="product_description" class="form-control" id="pd1" rows="3" required>{{ $product->product_description }}</textarea>
+            <textarea name="description" class="form-control" id="pd1" rows="3" required> {{ $product->description }}</textarea>
         </div>
-        <!-- specificaitons -->
+
+        <!-- specifications -->
         <h2 class="text-danger mt-3">Specifications</h2>
         <div class="form-group">
-            <label for="processor">processor</label>
-            <input type="text" name="processor" value="{{ $product->processor }}" class="form-control" id="processor" required>
+            <label for="bluetooth">bluetooth</label>
+            <select class="form-control" name="bluetooth" id="bluetooth">
+                <option value="{{ $product->bluetooth }}">{{ $product->bluetooth }}</option>
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="display">display</label>
-            <input type="text" name="display" value="{{ $product->display }}" class="form-control" id="display" required>
+            <label for="DVD_player">DVD_player</label>
+            <select class="form-control" name="DVD_player" id="DVD_player">
+                <option value="{{ $product->DVD_player }}">{{ $product->DVD_player }}</option>
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="memory"> memory</label>
-            <input type="text" name="memory" value="{{ $product->memory }}" class="form-control" id="memory" required>
+            <label for="leather_interior">leather_interior</label>
+            <select class="form-control" name="leather_interior" id="leather_interior">
+            <option value="{{ $product->leather_interior }}">{{ $product->leather_interior }}</option>
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="storage">storage</label>
-            <input type="text" name="storage" value="{{ $product->storage }}" class="form-control" id="storage" required>
+            <label for="push_star_ignition">push star ignition</label>
+            <select class="form-control" name="push_star_ignition" id="push_star_ignition">
+                <option value="{{ $product->push_star_ignition }}">{{ $product->push_star_ignition }}</option>
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="graphics">graphics</label>
-            <input type="text" name="graphics" value="{{ $product->graphics }}" class="form-control" id="graphics" required>
-        </div>
-        <div class="form-group">
-            <label for="operating_system">operating system</label>
-            <input type="text" name="operating_system" value="{{ $product->operating_system }}" class="form-control" id="operating_system" required>
-        </div>
-        <div class="form-group">
-            <label for="battery">battery</label>
-            <input type="text" name="battery" value="{{ $product->battery }}" class="form-control" id="battery" required>
-        </div>
-        <div class="form-group">
-            <label for="adapter"> adapter</label>
-            <input type="text" name="adapter" value="{{ $product->adapter }}" class="form-control" id="adapter" required>
-        </div>
-        <div class="form-group">
-            <label for="audio">audio</label>
-            <input type="text" name="audio" value="{{ $product->audio }}" class="form-control" id="audio" required>
-        </div>
-        <!-- Input device -->
-        <h2 class="text-danger mt-3">Input device</h2>
-        <div class="form-group">
-            <label for="keyboard">keyboard</label>
-            <input type="text" name="keyboard" value="{{ $product->keyboard }}" class="form-control" id="keyboard" required>
-        </div>
-        <div class="form-group">
-            <label for="optical_drive"> optical drive</label>
-            <input type="text" name="optical_drive" value="{{ $product->optical_drive }}" class="form-control" id="optical_drive" required>
-        </div>
-        <div class="form-group">
-            <label for="webcam">webcam</label>
-            <input type="text" name="webcam" value="{{ $product->webcam }}" class="form-control" id="webcam" required>
-        </div>
-
-        <!-- Network and wireless connectivity -->
-        <h2 class="text-danger mt-3">Network and wireless connectivity</h2>
-        <div class="form-group">
-            <label for="wifi">wifi</label>
-            <input type="text" name="wifi" value="{{ $product->wifi }}" class="form-control" id="wifi" required>
-        </div>
-        <div class="form-group">
-            <label for="bluetooth"> bluetooth </label>
-            <input type="text" name="bluetooth" value="{{ $product->bluetooth }}" class="form-control" id="bluetooth" required>
-        </div>
-        <!-- Port connector and slot -->
-        <h2 class="text-danger mt-3">Port connector and slot</h2>
-        <div class="form-group">
-            <label for="USB">USB</label>
-            <input type="text" name="USB" value="{{ $product->USB }}" class="form-control" id="USB" required>
-        </div>
-        <div class="form-group">
-            <label for="HDMI"> HDMI </label>
-            <input type="text" name="HDMI" value="{{ $product->HDMI }}" class="form-control" id="HDMI" required>
-        </div>
-        <div class="form-group">
-            <label for="VGA">VGA</label>
-            <input type="text" name="VGA" value="{{ $product->VGA }}" class="form-control" id="VGA" required>
-        </div>
-        <div class="form-group">
-            <label for="audio_jack_combo"> audio jack combo </label>
-            <input type="text" name="audio_jack_combo" value="{{ $product->audio_jack_combo }}" class="form-control" id="audio_jack_combo" required>
-        </div>
-
-        <!-- Physical specification -->
-        <h2 class="text-danger mt-3">Physical specification</h2>
-        <div class="form-group">
-            <label for="dimensions">dimensions</label>
-            <input type="text" name="dimensions" value="{{ $product->dimensions }}" class="form-control" id="dimensions" required>
-        </div>
-        <div class="form-group">
-            <label for="weight"> weight </label>
-            <input type="text" name="weight" value="{{ $product->weight }}" class="form-control" id="weight" required>
-        </div>
-        <div class="form-group">
-            <label for="colors"> colors </label>
-            <input type="text" name="colors" value="{{ $product->colors }}" class="form-control" id="colors" required>
-        </div>
-        <!-- warranty -->
-        <h2 class="text-danger mt-3">warranty</h2>
-        <div class="form-group">
-            <label for="manufacturing_warranty">manufacturing warranty</label>
-            <input type="text" name="manufacturing_warranty" value="{{ $product->manufacturing_warranty }}" class="form-control" id="manufacturing_warranty" required>
+            <label for="perking_assist">perking_assist</label>
+            <select class="form-control" name="perking_assist" id="perking_assist">
+                <option value="{{ $product->perking_assist }}">{{ $product->perking_assist }}</option>
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
         </div>
 
 
+        <!-- Details -->
+        <h2 class="text-danger mt-3">car details</h2>
+        <div class="form-group">
+            <label for="wheel">wheel</label>
+            <input type="text" name="wheel" value="{{ $product->wheel }}" class="form-control" id="wheel" required>
+        </div>
+        <div class="form-group">
+            <label for="top_speed"> optical drive</label>
+            <input type="text" name="top_speed" value="{{ $product->top_speed }}" class="form-control" id="top_speed" required>
+        </div>
+        <div class="form-group">
+            <label for="seat_capacity">seat_capacity</label>
+            <input type="number" name="seat_capacity" value="{{ $product->seat_capacity }}" class="form-control" id="seat_capacity" required>
+        </div>
 
-        <button type="submit" class="btn btn-primary">Submit Now</button>
+
+        <div class="form-group">
+            <label for="body">body</label>
+            <input type="text" name="body" value="{{ $product->body }}" class="form-control" id="body" required>
+        </div>
+        <div class="form-group">
+            <label for="engine_capacity">engine_capacity</label>
+            <input type="number" name="engine_capacity" value="{{ $product->engine_capacity }}" class="form-control" id="engine_capacity" required>
+        </div>
+        <div class="form-group">
+            <label for="drive">drive</label>
+            <input type="text" name="drive" value="{{ $product->drive }}" class="form-control" id="drive" required>
+        </div>
+        <div class="form-group">
+            <label for="mileage">mileage</label>
+            <input type="number" name="mileage" value="{{ $product->mileage }}" class="form-control" id="mileage" required>
+        </div>
+        <div class="form-group">
+            <label for="fuel_type">fuel_type</label>
+            <input type="text" name="fuel_type" value="{{ $product->fuel_type }}" class="form-control" id="fuel_type" required>
+        </div>
+        <div class="form-group">
+            <label for="condition">condition</label>
+            <input type="text" name="condition" value="{{ $product->condition }}" class="form-control" id="condition" required>
+        </div>
+        <div class="form-group">
+            <label for="exterior_color">exterior_color</label>
+            <input type="text" name="exterior_color" value="{{ $product->exterior_color }}" class="form-control" id="exterior_color" required>
+        </div>
+        <div class="form-group">
+            <label for="interior_color">interior_color</label>
+            <input type="text" name="interior_color" value="{{ $product->interior_color }}" class="form-control" id="interior_color" required>
+        </div>
+        <div class="form-group">
+            <label for="warranty">warranty</label>
+            <input type="text" name="warranty" value="{{ $product->warranty }}" class="form-control" id="warranty" required>
+        </div>
+
+        <button type="submit" class="btn btn-info w-100">Submit Now</button>
     </form>
 </div>
 @endsection

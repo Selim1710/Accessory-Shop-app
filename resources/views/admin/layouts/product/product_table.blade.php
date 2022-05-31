@@ -18,36 +18,31 @@
                 <th>SL</th>
                 <th>Model</th>
                 <th>Name</th>
-                <th>Regular Price</th>
+                <th>Price</th>
                 <th>Image</th>
                 <th>Offer</th>
-                <th>Product Description</th>
+                <th>Description</th>
                 <!-- specification -->
-                <th>processor</th>
-                <th>display</th>
-                <th>memory</th>
-                <th>storage</th>
-                <th>graphics</th>
-                <th>operating_system</th>
-                <th>battery</th>
-                <th>adapter</th>
-                <th>audio</th>
-                <th>keyboard</th>
-                <th>optical_drive</th>
-                <th>webcam</th>
-                <th>wifi</th>
                 <th>bluetooth</th>
-                <th>USB</th>
-                <th>HDMI</th>
-                <th>VGA</th>
-                <th>audio_jack_combo</th>
-                <th>dimensions</th>
-                <th>weight</th>
-                <th>colors</th>
-                <th>manufacturing_warranty</th>
+                <th>DVD_player</th>
+                <th>leather_interior</th>
+                <th>push_star_ignition</th>
+                <th>perking_assist</th>
+                <th>wheel</th>
+                <th>top_speed</th>
+                <th>seat_capacity</th>
+                <th>body</th>
+                <th>engine_capacity</th>
+                <th>drive</th>
+                <th>mileage</th>
+                <th>fuel_type</th>
+                <th>condition</th>
+                <th>exterior_color</th>
+                <th>interior_color</th>
+                <th>warranty</th>
 
                 <th>brand_id</th>
-                <th>Action</th>
+                <th>Action 26</th>
             </tr>
         </thead>
         <tbody>
@@ -55,35 +50,30 @@
             <tr class="text-center">
                 <td>{{ $key+1 }}</td>
                 <td>{{ $product->model }}</td>
-                <td>{{ $product->product_name }}</td>
-                <td>{{ $product->regular_price }}</td>
-                <td> <img src="{{ asset('/uploads/products/'.$product->product_image ) }}" style="width:80px;height:80px;" alt=""> </td>
-                <td>{{ $product->product_offer }} %</td>
-                <td>{{ $product->product_description }}</td>
+                <td>{{ $product->name }}</td>
+                <td>{{ $product->price }}</td>
+                <td> <img src="{{ asset('/uploads/products/'.$product->image ) }}" style="width:80px;height:80px;" alt=""> </td>
+                <td>{{ $product->offer }} %</td>
+                <td>{{ $product->description }}</td>
                 <!-- specification -->
-                <td>{{ $product->processor }}</td>
-                <td>{{ $product->display }}</td>
-                <td>{{ $product->memory }}</td>
-                <td>{{ $product->storage }}</td>
-                <td>{{ $product->graphics }}</td>
-                <td>{{ $product->operating_system }}</td>
-                <td>{{ $product->battery }}</td>
-                <td>{{ $product->adapter }}</td>
-                <td>{{ $product->audio }}</td>
-                <td>{{ $product->keyboard }}</td>
-                <td>{{ $product->optical_drive }}</td>
-                <td>{{ $product->webcam }}</td>
-                <td>{{ $product->wifi }}</td>
                 <td>{{ $product->bluetooth }}</td>
-                <td>{{ $product->USB }}</td>
-                <td>{{ $product->HDMI }}</td>
-                <td>{{ $product->VGA }}</td>
-                <td>{{ $product->audio_jack_combo }}</td>
-                <td>{{ $product->dimensions }}</td>
-                <td>{{ $product->weight }}</td>
-                <td>{{ $product->colors }}</td>
-                <td>{{ $product->manufacturing_warranty }}</td>
-
+                <td>{{ $product->DVD_player }}</td>
+                <td>{{ $product->leather_interior }}</td>
+                <td>{{ $product->push_star_ignition }}</td>
+                <td>{{ $product->perking_assist }}</td>
+                <td>{{ $product->wheel }}</td>
+                <td>{{ $product->top_speed }}</td>
+                <td>{{ $product->seat_capacity }}</td>
+                <td>{{ $product->body }}</td>
+                <td>{{ $product->engine_capacity }}</td>
+                <td>{{ $product->drive }}</td>
+                <td>{{ $product->mileage }}</td>
+                <td>{{ $product->fuel_type }}</td>
+                <td>{{ $product->condition }}</td>
+                <td>{{ $product->exterior_color }}</td>
+                <td>{{ $product->interior_color }}</td>
+                <td>{{ $product->warranty }}</td>
+                
                 <td>{{ $product->brand_id }}</td>
 
                 <td>

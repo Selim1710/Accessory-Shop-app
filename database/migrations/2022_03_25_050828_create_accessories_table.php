@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateAccessoriesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
         Schema::create('accessories', function (Blueprint $table) {
@@ -43,11 +39,6 @@ class CreateAccessoriesTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('accessories');
