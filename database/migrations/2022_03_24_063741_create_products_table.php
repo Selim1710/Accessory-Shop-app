@@ -11,40 +11,36 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('model');
-            $table->string('product_name');
-            $table->integer('regular_price');
-            $table->string('product_image');
-            $table->double('product_offer');
-            $table->string('product_description');
+            $table->string('name');
+            $table->integer('price');
+            $table->string('image');
+            $table->double('offer');
+            $table->string('description');
 
-            // specifications
-            $table->string('processor');
-            $table->string('display');
-            $table->string('memory');
-            $table->string('storage');
-            $table->string('graphics');
-            $table->string('operating_system');
-            $table->string('battery');
-            $table->string('adapter');
-            $table->string('audio');
-            // input device
-            $table->string('keyboard');
-            $table->string('optical_drive');
-            $table->string('webcam');
-            // Network and wireless connectivity
-            $table->string('wifi');
-            $table->string('bluetooth');
-            // Port connector and slot
-            $table->string('USB');
-            $table->string('HDMI');
-            $table->string('VGA');
-            $table->string('audio_jack_combo');
-            // Physical specification
-            $table->string('dimensions');
-            $table->string('weight');
-            $table->string('colors');
-            // warranty
-            $table->string('manufacturing_warranty');
+            ////////////// specifications //////////////
+
+            // car feature
+            $table->string('bluetooth')->default('no');
+            $table->string('DVD_player')->default('no');
+            $table->string('leather_interior')->default('no');
+            $table->string('push_star_ignition')->default('no');
+            $table->string('perking_assist')->default('no');
+
+            // car details
+            $table->string('wheel');
+            $table->string('top_speed');
+            $table->string('seat_capacity');
+            $table->string('body');
+            $table->string('engine_capacity');
+            $table->string('drive');
+            $table->string('mileage');
+            $table->string('fuel_type');
+            $table->string('condition');
+            $table->string('exterior_color');
+            $table->string('interior_color');
+            $table->string('warranty');
+
+            ////////////// Relations //////////////
 
             $table->unsignedBigInteger('brand_id')->default();
             $table->foreign('brand_id')
@@ -56,11 +52,6 @@ class CreateProductsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('products');

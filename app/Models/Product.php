@@ -17,5 +17,8 @@ class Product extends Model
     public function stock(){
         return $this->belongsTo(Stock::class);
     }
+    public function accessory(){
+        return $this->hasMany(Accessory::class);
+    }
 
 }
