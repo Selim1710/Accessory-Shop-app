@@ -1,12 +1,13 @@
 <div class="first_nav">
    <div class="menu">
       <!-- logo -->
-      <a href="#">
-         <div class="Logo m-2">
+      <div class="Logo m-2">
+         <a href="#">
             <img src="{{ asset('website/images/logo.jpg') }}" alt="" class="img-fluid w-25">
-            <h2 class="navbar-brand">Accessory Shop</h2>
-         </div>
-      </a>
+         </a>
+         <h2 class="navbar-brand" id="desktop_nav">Accessory Shop</h2>
+      </div>
+      <h2 class="navbar-brand" id="mobile_nav">Accessory Shop</h2>
       <!-- search -->
       <div class="container h-100 mt-4">
          <div class="d-flex justify-content-center h-100">

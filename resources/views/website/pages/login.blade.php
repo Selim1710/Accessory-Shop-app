@@ -6,12 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- style -->
     <link rel="stylesheet" href="{{ asset('website/login/form.css') }}">
-
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>User login form</title>
 </head>
 
@@ -25,23 +22,36 @@
         <p class="alert alert-success text-center">{{ session()->get('message') }}</p>
         @endif
         <!-- end -->
-        <div id="formContent">
-            <div class="fadeIn first">
-                <br>
-                <p>Please! Login from here</p>
+        <section class="My_form p-4">
+            <div class="head text-center m-4">
+                <h1>Accessory Shopping Login Form</h1>
             </div>
-            <form action="{{ route('user.do.login') }}" method="POST">
-                @csrf
-                <input type="email" name="email" class="fadeIn second" placeholder="Enter Email" required>
-                <input type="password" name="password" class="fadeIn third" placeholder="Enter Password" required>
-                <input type="submit" class="fadeIn fourth" value="Sign In">
-            </form>
-            <div id="formFooter">
-                <h4 class="underlineHover mr-2">Forgot password?</h4> <br>
-                <strong>if not register</strong>
-                <a href="{{ route('user.registration.form') }}" class="btn btn-success text-uppercase">Sign Up</a>
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 border-right col-sm-12 col-md-12">
+                        <form action="{{ route('user.do.login') }}" method="POST">
+                            <div class="form-group">
+                                <label for="">Enter Your Email</label>
+                                <input type="email" name="email" placeholder="Enter input" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Enter Your Password</label>
+                                <input type="text" name="password" placeholder="Enter input" class="form-control">
+                            </div>
+                            <button class="btn btn-warning text-white w-100"><i class="fa fa-paper-plane"></i> Sign In</button>
+                        </form>
+
+                    </div>
+                    <div class="col-lg-6 col-sm-12 col-md-12">
+                        <h2 class="text-center">OR</h2>
+                        <div>
+                            <a href="{{ route('user.registration.form') }}" class="btn btn-info w-100">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 
