@@ -84,6 +84,7 @@
 </div>
 <!-- category -->
 <section class="all_categories">
+    <br>
     <div class="container">
         <div>
             <h1 class="section_header">Categories</h1>
@@ -94,7 +95,7 @@
         <div class="container-fluid" id="inventory">
             <div class="row">
                 @foreach($categories as $category)
-                <div class="col-md-3 col-lg-3">
+                <div class="col-md-3 col-lg-3 col-sm-3 mt-2">
                     <div class="my_card">
                         <img class="img-fluid" src="{{ asset('uploads/category/'.$category->image) }}" alt="Card image cap">
                         <button class="btn view-btn w-100">{{ $category->category_name }}</button>
@@ -106,7 +107,7 @@
                 @endforeach
             </div>
         </div>
-        <br><br>
+        <br><br><br><br>
     </div>
 </section>
 <!-- product -->

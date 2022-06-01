@@ -25,10 +25,10 @@
             <i class="fa-solid fa-basket-shopping fa-2xl"></i><span class="badge badge-danger">0 items</span>
          </div>
       </a>
-      <!-- notification -->
+      <!-- user -->
       <a href="#" class="menu_item">
          <div class="d-flex">
-            <i class="fa-regular fa-bell fa-2xl"></i><span class="badge badge-secondary">0 items</span>
+            <i class="fa-solid fa-user fa-2xl"></i><span class="badge badge-secondary">0 items</span>
          </div>
       </a>
    </div>
@@ -61,7 +61,6 @@
                <a class="nav-link" href="#">Accounts</a>
             </li>
          </ul>
-
       </div>
    </nav>
 </div>
