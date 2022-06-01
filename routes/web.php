@@ -28,14 +28,17 @@ Route::group(['prefix' => 'website'], function () {
     // search
     Route::post('/user/search/product', [HomeController::class, 'search'])->name('website.search');
 
-    // all product
+      // categories
+      Route::get('/show/sub/category/product/{id}', [HomeController::class, 'BrandProduct'])->name('show.sub.category.product');
+      Route::get('/show/category/product/{id}', [HomeController::class, 'categoryProduct'])->name('show.category.product');  
+
+    // product
     Route::get('/view/all/product', [HomeController::class, 'allProduct'])->name('website.all.product');
+    Route::get('/product/details/{id}', [HomeController::class, 'productDetails'])->name('website.product.details');
 
-    // see all categories
-    Route::get('/show/sub/category/product/{id}', [HomeController::class, 'BrandProduct'])->name('show.sub.category.product');
-
-    // featured categories
-    Route::get('/show/category/product/{id}', [HomeController::class, 'categoryProduct'])->name('show.category.product');
+    // accessory
+    Route::get('/view/all/accessories', [HomeController::class, 'allAccessory'])->name('website.all.accessory');
+    Route::get('/accessory/details/{id}', [HomeController::class, 'accessoryDetails'])->name('website.accessory.details');
 
     // login
     Route::get('/login/form', [UserController::class, 'loginForm'])->name('users.login.form');
@@ -55,14 +58,6 @@ Route::group(['prefix' => 'website'], function () {
 
     // download pdf
     Route::get('/user/download/pdf/{id}', [UserController::class, 'downloadPDF'])->name('user.download.pdf');
-
-
-    // product details
-    Route::get('/product/details/{id}', [HomeController::class, 'productDetails'])->name('website.product.details');
-    Route::get('/user/compare/product', [HomeController::class, 'compareProduct'])->name('user.compare.product');
-
-    // accessory details
-    Route::get('/accessory/details/{id}', [HomeController::class, 'accessoryDetails'])->name('website.accessory.details');
 
     Route::group(['middleware' => 'check_customer'], function () {
         // add to cart
@@ -89,7 +84,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/do/login', [AdminLoginController::class, 'doLogin'])->name('admin.do.login');
     Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
-    Route::group(['middleware' => ['auth','check_admin']], function () {
+    Route::group(['middleware' => ['auth', 'check_admin']], function () {
 
         // dashboard
         Route::get('/dashboard', [DashBoardController::class, 'dashboard'])->name('admin.dashboard');
@@ -130,16 +125,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/update/stock/{id}', [StockController::class, 'update'])->name('admin.update.stock');
         Route::get('/delete/stock/{id}', [StockController::class, 'delete'])->name('admin.delete.stock');
 
-          // accessory
-          Route::get('/manage/accessory', [AccessoryController::class, 'manageAccessory'])->name('admin.manage.accessory');
-          Route::get('/add/accessory', [AccessoryController::class, 'add'])->name('admin.add.accessory');
-          Route::post('/store/accessory', [AccessoryController::class, 'store'])->name('admin.store.accessory');
-          Route::get('/edit/accessory/{id}', [AccessoryController::class, 'edit'])->name('admin.edit.accessory');
-          Route::post('/update/accessory/{id}', [AccessoryController::class, 'update'])->name('admin.update.accessory');
-          Route::get('/delete/accessory/{id}', [AccessoryController::class, 'delete'])->name('admin.delete.accessory');
-          Route::get('/view/accessory/image/{id}', [AccessoryController::class, 'view'])->name('admin.view.accessory');
-          Route::post('/change/accessory/image/{id}', [AccessoryController::class, 'change'])->name('admin.change.accessory.image');
-  
+        // accessory
+        Route::get('/manage/accessory', [AccessoryController::class, 'manageAccessory'])->name('admin.manage.accessory');
+        Route::get('/add/accessory', [AccessoryController::class, 'add'])->name('admin.add.accessory');
+        Route::post('/store/accessory', [AccessoryController::class, 'store'])->name('admin.store.accessory');
+        Route::get('/edit/accessory/{id}', [AccessoryController::class, 'edit'])->name('admin.edit.accessory');
+        Route::post('/update/accessory/{id}', [AccessoryController::class, 'update'])->name('admin.update.accessory');
+        Route::get('/delete/accessory/{id}', [AccessoryController::class, 'delete'])->name('admin.delete.accessory');
+        Route::get('/view/accessory/image/{id}', [AccessoryController::class, 'view'])->name('admin.view.accessory');
+        Route::post('/change/accessory/image/{id}', [AccessoryController::class, 'change'])->name('admin.change.accessory.image');
+
         // Order List
         Route::get('/manage/order', [ManageOrderController::class, 'manageOrder'])->name('admin.manage.order');
         Route::get('/accept/order/{id}', [ManageOrderController::class, 'acceptOrder'])->name('admin.accept.order');

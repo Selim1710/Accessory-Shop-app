@@ -152,7 +152,7 @@
         </div>
     </div>
     <!-- products section -->
-    <div id="products">
+    <div>
         <div class="container">
             <div class="d-flex flex-row">
                 <div class="text-muted m-2" id="res">Showing 44 results</div>
@@ -168,7 +168,7 @@
             </div>
             <div class="row">
                 @foreach($products as $product)
-                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-3">
+                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
                     <div class="card">
                         <a href="{{ route('website.product.details',$product->id) }}">
                             <img class="card-img-top" src="{{ asset('uploads/products/'.$product->image) }}">
@@ -183,6 +183,9 @@
                     </div>
                 </div>
                 @endforeach
+            </div>
+            <div class="view_button">
+                <a href="{{ route('website.all.product') }}" class="btn btn-warning w-100 mt-2 text-white">View all</a>
             </div>
         </div>
     </div>
@@ -199,7 +202,7 @@
             </div>
             <div class="row">
                 @foreach($accessories as $accessory)
-                <div class="col-md-6">
+                <div class="col-lg-6 d-flex align-items-stretch">
                     <div class="box">
                         <a href="{{ route('website.accessory.details',$accessory->id) }}">
                             <div class="img-box">
@@ -220,6 +223,9 @@
                     </div>
                 </div>
                 @endforeach
+            </div>
+            <div class="view_button">
+                <a href="{{ route('website.all.accessory') }}" class="btn btn-warning w-100 mt-2 text-white">View all</a>
             </div>
         </div>
     </div>

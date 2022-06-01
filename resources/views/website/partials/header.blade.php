@@ -2,7 +2,7 @@
    <div class="menu">
       <!-- logo -->
       <div class="Logo m-2">
-         <a href="#">
+         <a href="{{ route('website.home') }}">
             <img src="{{ asset('website/images/logo.jpg') }}" alt="" class="img-fluid w-25">
          </a>
          <h2 class="navbar-brand" id="desktop_nav">Accessory Shop</h2>
@@ -43,22 +43,22 @@
       <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
          <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-               <a class="nav-link" href="#">Home</a>
+               <a class="nav-link" href="{{ route('website.home') }}">Home</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Product</a>
+               <a class="nav-link" href="{{ route('website.all.product') }}">Product</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Accessories</a>
+               <a class="nav-link" href="{{ route('website.all.accessory') }}">Accessories</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Services</a>
+               <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
                <a class="nav-link" href="#">Contact</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Accounts</a>
+               <a class="nav-link" href="{{ route('users.login.form') }}">Accounts</a>
             </li>
          </ul>
       </div>
