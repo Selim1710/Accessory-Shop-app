@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function home()
     {
         $categories = Category::with('brand')->get();
-        $products = Product::with('brand')->orderBy('id', 'DESC')->paginate(8);
+        $products = Product::with('brand')->orderBy('id', 'DESC')->paginate(6);
         $accessories = Accessory::with('product')->orderBy('id', 'DESC')->paginate(6);
         return view('website.layouts.home', compact('categories', 'products','accessories'));
     }

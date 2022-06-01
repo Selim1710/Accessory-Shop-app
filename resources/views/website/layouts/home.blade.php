@@ -185,7 +185,9 @@
                 @endforeach
             </div>
             <div class="view_button">
-                <a href="{{ route('website.all.product') }}" class="btn btn-warning w-100 mt-2 text-white">View all</a>
+                <a href="{{ route('website.all.product') }}" class="btn btn-info w-100 mt-2 text-white">
+                    View all
+                </a>
             </div>
         </div>
     </div>
@@ -224,7 +226,7 @@
                 </div>
                 @endforeach
             </div>
-            <div class="view_button">
+            <div>
                 <a href="{{ route('website.all.accessory') }}" class="btn btn-warning w-100 mt-2 text-white">View all</a>
             </div>
         </div>
