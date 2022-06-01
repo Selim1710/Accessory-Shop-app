@@ -195,33 +195,31 @@
                 <h2 class="section_header">
                     Accessories
                 </h2>
-                <p class="section_des">view product and click on find accessories!</p>
+                <p class="section_des">View product and click on find accessories!</p>
             </div>
             <div class="row">
-
+                @foreach($accessories as $accessory)
                 <div class="col-md-6">
                     <div class="box">
-                        <a href="">
+                        <a href="{{ route('website.accessory.details',$accessory->id) }}">
                             <div class="img-box">
-                                <img src="" alt="">
+                                <img src="{{ asset('uploads/accessories/'.$accessory->image) }}" alt="">
                             </div>
                         </a>
                         <div class="detail-box">
                             <h5>
-                                Name:
+                                Name: {{ $accessory->name }}
                             </h5>
                             <h5>
-                                Details:
+                                Details: {{ $accessory->description }}
                             </h5>
-                            <h6>
-                                Type:
-                            </h6>
-                            <h5>Price: </h5>
+                            <h5>Price: {{ $accessory->price }}</h5>
+                            <h6 class="text-danger">Offer: {{ $accessory->offer }} %</h6>
                             <a href="" class="btn btn-info">Add To Cart</a>
                         </div>
                     </div>
                 </div>
-
+                @endforeach
             </div>
         </div>
     </div>

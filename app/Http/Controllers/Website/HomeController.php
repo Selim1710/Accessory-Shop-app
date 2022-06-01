@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
+use App\Models\Accessory;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Stock;
@@ -15,13 +16,18 @@ class HomeController extends Controller
     {
         $categories = Category::with('brand')->get();
         $products = Product::with('brand')->orderBy('id', 'DESC')->paginate(8);
-        // return $products;
-        return view('website.layouts.home', compact('categories', 'products'));
+        $accessories = Accessory::with('product')->get();
+        // return $accessories;
+        return view('website.layouts.home', compact('categories', 'products','accessories'));
     }
     public function productDetails($id){
         $product = Product::find($id);
         $stocks = Stock::where('id',$product->id)->get();
         return view('website.layouts.product_details', compact('product','stocks'));
+    }
+    public function accessoryDetails($id){
+        $accessory = Accessory::find($id);
+        return view('website.layouts.accessory_details', compact('accessory'));
     }
     public function search(Request $request)
     {
