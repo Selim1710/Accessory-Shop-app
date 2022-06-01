@@ -36,10 +36,12 @@
     font-weight: bold;
     text-shadow: 1px 1px #ff7675;
 }
-#mobile_nav{
+
+#mobile_nav {
     display: none;
 }
-#desktop_nav{
+
+#desktop_nav {
     display: block;
 }
 
@@ -131,24 +133,29 @@
 }
 
 @media only screen and (max-width:886px) {
-    #mobile_nav{
+    #mobile_nav {
         display: block;
     }
-    #desktop_nav{
+
+    #desktop_nav {
         display: none;
     }
+
     .first_nav {
         display: inline-block;
     }
+
     .menu {
         display: inline-block;
     }
+
     .menu_item {
         float: right;
         margin-top: 16%;
         margin-right: 12%;
         margin-bottom: 4%;
     }
+
     .searchbar:hover>.search_input {
         width: 250px;
     }
@@ -161,6 +168,7 @@
 .all_categories {
     background-color: #dfe6e9;
 }
+
 .my_card img {
     width: 248px;
     height: 130px;
@@ -245,7 +253,7 @@
 }
 
 @media only screen and (max-width:886px) {
-    
+
     .my_card img {
         width: 348px;
         height: 153px;
@@ -524,16 +532,91 @@ label {
 .product-table {
     margin-left: 13%;
     margin-right: 10%;
-  }
-  
+}
 
-/*********************** service ************************/
-/* card details start  */
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:400,400i,700,700i');
+/*********************** accessories ************************/
+.accessories_section {
+    position: relative;
+    padding-top: 45px;
+}
+.accessories_section .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 45px;
+    border-radius: 5px;
+    padding: 20px 15px;
+    background-color: #222831;
+    color: #ffffff;
+}
+.accessories_section .box .img-box {
+    width: 175px;
+    min-width: 175px;
+    height: 175px;
+    margin-right: 15px;
+    position: relative;
+    -webkit-transition: all 0.1 0.5s;
+    transition: all 0.1 0.5s;
+    border-radius: 100%;
+    border: 5px solid #ffbe33;
+    overflow: hidden;
+}
+.accessories_section .box .img-box img {
+    width: 100%;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+.accessories_section .box .detail-box h5 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    margin: 0;
+}
+.accessories_section .box .detail-box h6 {
+    font-family: 'Dancing Script', cursive;
+    margin: 10px 0;
+}
 
-.service {
+.accessories_section .box .detail-box h6 span {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.accessories_section .box .detail-box a {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #ffbe33;
+    color: #ffffff;
+    border-radius: 45px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+}
+
+.accessories_section .box .detail-box a:hover {
+    background-color: #e69c00;
+}
+
+.accessories_section .box .detail-box a svg {
+    width: 20px;
+    height: auto;
+    margin-left: 5px;
+    fill: #ffffff;
+}
+
+.accessories_section .box:hover .img-box img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/*********************** services ************************/
+.services {
     text-align: center;
     margin-top: 3%;
+    margin-bottom: 5%;
 }
 
 .card_content {
@@ -623,7 +706,6 @@ label {
     text-transform: uppercase;
     white-space: normal;
     word-wrap: break-word;
-    color: #fff;
 }
 
 .btn_card:hover {
@@ -634,8 +716,6 @@ a.btn_card {
     text-decoration: none;
     color: #fff;
 }
-
-/* End card section */
 
 /*********************** footer ************************/
 .context-dark, .bg-gray-dark, .bg-primary {

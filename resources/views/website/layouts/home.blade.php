@@ -168,7 +168,7 @@
             </div>
             <div class="row">
                 @foreach($products as $product)
-                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-1">
+                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-3">
                     <div class="card">
                         <a href="{{ route('website.product.details',$product->id) }}">
                             <img class="card-img-top" src="{{ asset('uploads/products/'.$product->image) }}">
@@ -187,18 +187,58 @@
         </div>
     </div>
 </section>
+<!-- Accessories -->
+<section class="accessories_section layout_padding-bottom">
+    <div class="accessories_container">
+        <div class="container ">
+            <div class="heading_container heading_center">
+                <h2 class="section_header">
+                    Accessories
+                </h2>
+                <p class="section_des">view product and click on find accessories!</p>
+            </div>
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="box">
+                        <a href="">
+                            <div class="img-box">
+                                <img src="" alt="">
+                            </div>
+                        </a>
+                        <div class="detail-box">
+                            <h5>
+                                Name:
+                            </h5>
+                            <h5>
+                                Details:
+                            </h5>
+                            <h6>
+                                Type:
+                            </h6>
+                            <h5>Price: </h5>
+                            <a href="" class="btn btn-info">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
 <!-- Services -->
-<section class="service">
+<section class="services">
     <div>
         <h2 class="section_header">
-            Our Services
+            Our services
         </h2>
         <p class="section_des">We Offer a wide range of services.</p>
     </div>
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-4 mt-2 mb-2">
+            <div class="col-lg-4">
                 <div class="card_content">
                     <div class="card_img">
                         <img src="https://placeimg.com/380/230/nature" alt="">
@@ -214,7 +254,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
