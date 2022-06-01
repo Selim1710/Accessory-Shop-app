@@ -21,9 +21,9 @@ class CartController extends Controller
             $cartData = [$id => [
                 'product_id' => $product->id,
                 'product_model' => $product->model,
-                'product_name' => $product->product_name,
-                'regular_price' => $product->regular_price,
-                'product_offer' => $product->product_offer,
+                'product_name' => $product->name,
+                'regular_price' => $product->price,
+                'product_offer' => $product->offer,
                 'product_quantity' => 1,
             ]];
             session()->put('cart', $cartData);
@@ -34,9 +34,9 @@ class CartController extends Controller
             $cartExist[$id] = [
                 'product_id' => $product->id,
                 'product_model' => $product->model,
-                'product_name' => $product->product_name,
-                'regular_price' => $product->regular_price,
-                'product_offer' => $product->product_offer,
+                'product_name' => $product->name,
+                'regular_price' => $product->price,
+                'product_offer' => $product->offer,
                 'product_quantity' => 1,
             ];
             session()->put('cart', $cartExist);
@@ -100,9 +100,9 @@ class CartController extends Controller
             $cartData = [$id => [
                 'product_id' => $product->id,
                 'product_model' => $product->model,
-                'product_name' => $product->product_name,
-                'regular_price' => $product->regular_price,
-                'product_offer' => $product->product_offer,
+                'product_name' => $product->name,
+                'regular_price' => $product->price,
+                'product_offer' => $product->offer,
                 'product_quantity' => $request->quantity,
             ]];
             session()->put('cart', $cartData);
@@ -113,9 +113,9 @@ class CartController extends Controller
             $cartExist[$id] = [
                 'product_id' => $product->id,
                 'product_model' => $product->model,
-                'product_name' => $product->product_name,
-                'regular_price' => $product->regular_price,
-                'product_offer' => $product->product_offer,
+                'product_name' => $product->name,
+                'regular_price' => $product->price,
+                'product_offer' => $product->offer,
                 'product_quantity' => $request->quantity,
             ];
             session()->put('cart', $cartExist);

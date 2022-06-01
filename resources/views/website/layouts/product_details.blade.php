@@ -5,26 +5,26 @@
 		<div class="col-lg-12  p-3 main-section bg-white">
 			<div class="row">
 				<div class="col-lg-6 left-side-product-box pb-3">
-					<img src="{{ asset('/uploads/products/'.$product->product_image ) }}" class=" p-3">
+					<img src="{{ asset('/uploads/products/'.$product->image ) }}" class=" p-3">
 					<span class="sub-img">
-						<img src="{{ asset('/uploads/products/'.$product->product_image ) }}" class=" p-2">
-						<img src="{{ asset('/uploads/products/'.$product->product_image ) }}" class=" p-2">
+						<img src="{{ asset('/uploads/products/'.$product->image ) }}" class=" p-2">
+						<img src="{{ asset('/uploads/products/'.$product->image ) }}" class=" p-2">
 					</span>
 				</div>
 				<div class="col-lg-6 text-capitalize">
 					<div class="right-side-pro-detail p-3">
 						<div class="row">
 							<div class="model col-lg-12 font-italic">
-								<h2> {{ $product->model }} &nbsp; {{ $product->product_name }}</h2>
+								<h2> {{ $product->model }} &nbsp; {{ $product->name }}</h2>
 							</div>
 							<div class="col-lg-12">
-								<p class=" p-0 price-pro">Price: {{ $product->regular_price }} ৳</p>
+								<p class=" p-0 price-pro">Price: {{ $product->price }} ৳</p>
 								<hr class="p-0 ">
 							</div>
 							<div class="col-lg-12 pt-2">
 								<h5>Product Detail</h5>
 								<span>
-									{{ $product->product_description }}
+									{{ $product->description }}
 								</span>
 								<hr class=" pt-2 mt-2">
 							</div>
@@ -66,134 +66,90 @@
 		</div>
 	</div>
 </section>
-
+<!-- specifications -->
 <section>
-	<div class="product-table">
+	<div class="product-table text-capitalize">
 		<h1 class="w-25 p-2 rounded">Specifications</h1>
-		<!-- specifications -->
 		<table class="table table-hover">
 			<p class="bg-secondary text-white p-3 rounded">
-				Basic Information
+				Feature:
 			</p>
 			<tbody>
 				<tr>
-					<td>Processor</td>
+					<td>bluetooth</td>
 					<td>
-						{{ $product->processor }}
+						{{ $product->bluetooth }}
 					</td>
 				</tr>
 				<tr>
-					<td>Display</td>
-					<td>{{ $product->display }}</td>
+					<td>DVD player</td>
+					<td>{{ $product->DVD_player }}</td>
 				</tr>
 				<tr>
-					<td>Memory</td>
-					<td>{{ $product->memory }}</td>
+					<td>leather interior</td>
+					<td>{{ $product->leather_interior }}</td>
 				</tr>
 				<tr>
-					<td>Storage</td>
-					<td>{{ $product->storage }}</td>
+					<td>push star ignition</td>
+					<td>{{ $product->push_star_ignition }}</td>
 				</tr>
 				<tr>
-					<td>Graphics</td>
-					<td>{{ $product->graphics }}</td>
-				</tr>
-				<tr>
-					<td>Operating System</td>
-					<td>{{ $product->operating_system }}</td>
-				</tr>
-				<tr>
-					<td>Battery</td>
-					<td>{{ $product->battery }}</td>
-				</tr>
-				<tr>
-					<td>Adapter</td>
-					<td>{{ $product->adapter }}</td>
-				</tr>
-				<tr>
-					<td>Audio</td>
-					<td>{{ $product->audio }}</td>
+					<td>perking assist</td>
+					<td>{{ $product->perking_assist }}</td>
 				</tr>
 			</tbody>
 		</table>
-		<!-- input device -->
+		<!-- product detalis -->
 		<table class="table table-hover">
 			<p class="bg-secondary text-white p-3 rounded">
-				input device
+				product detalis
 			</p>
 			<tbody>
 				<tr>
-					<td>Keyboard</td>
-					<td>{{ $product->keyboard }}</td>
+					<td>wheel</td>
+					<td>{{ $product->wheel }}</td>
 				</tr>
 				<tr>
-					<td>Optical drive</td>
-					<td>{{ $product->optical_drive }}</td>
+					<td>top speed</td>
+					<td>{{ $product->top_speed }}</td>
 				</tr>
 				<tr>
-					<td>WebCam</td>
-					<td>{{ $product->webcam }}</td>
-				</tr>
-			</tbody>
-		</table>
-		<!-- Network & Wireless Connectivity -->
-		<table class="table table-hover">
-			<p class="bg-secondary text-white p-3 rounded">
-				Network & Wireless Connectivity
-			</p>
-			<tbody>
-				<tr>
-					<td>Wi-fi</td>
-					<td>{{ $product->wifi }}</td>
+					<td>seat_capacity</td>
+					<td>{{ $product->seat_capacity }}</td>
 				</tr>
 				<tr>
-					<td>Bluetooth</td>
-					<td>{{ $product->bluetooth }}</td>
-				</tr>
-			</tbody>
-		</table>
-		<!-- Ports, Connectors & Slots -->
-		<table class="table table-hover">
-			<p class="bg-secondary text-white p-3 rounded">
-				Ports, Connectors & Slots
-			</p>
-			<tbody>
-				<tr>
-					<td>USB</td>
-					<td>{{ $product->USB }}</td>
+					<td>body</td>
+					<td>{{ $product->body }}</td>
 				</tr>
 				<tr>
-					<td>HDMI</td>
-					<td>{{ $product->HDMI }}</td>
+					<td>engine capacity</td>
+					<td>{{ $product->engine_capacity }}</td>
 				</tr>
 				<tr>
-					<td>VGA</td>
-					<td>{{ $product->VGA }}</td>
+					<td>drive</td>
+					<td>{{ $product->drive }}</td>
 				</tr>
 				<tr>
-					<td>Audio Jack Combo</td>
-					<td>{{ $product->audio_jack_combo }}</td>
-				</tr>
-			</tbody>
-		</table>
-		<!-- Physical Specification -->
-		<table class="table table-hover">
-			<p class="bg-secondary text-white p-3 rounded">
-				Physical Specification
-			</p>
-			<tbody>
-				<tr>
-					<td>Dimensions (W x D x H)</td>
-					<td>{{ $product->dimensions }}</td>
+					<td>mileage</td>
+					<td>{{ $product->mileage }}</td>
 				</tr>
 				<tr>
-					<td>weights</td>
-					<td>{{ $product->weight }}</td>
+					<td>fuel type</td>
+					<td>{{ $product->fuel_type }}</td>
 				</tr>
 				<tr>
-					<td>color</td>
-					<td>{{ $product->colors }}</td>
+					<td>condition</td>
+					<td>{{ $product->condition }}</td>
 				</tr>
+				<tr>
+					<td>exterior color</td>
+					<td>{{ $product->exterior_color }}</td>
+				</tr>
+				<tr>
+					<td>interior color</td>
+					<td>{{ $product->interior_color }}</td>
+				</tr>
+				
 			</tbody>
 		</table>
 		<!--  Warranty -->
@@ -204,7 +160,7 @@
 			<tbody>
 				<tr>
 					<td>Manufacturing Warranty</td>
-					<td>{{ $product->manufacturing_warranty }}</td>
+					<td>{{ $product->warranty }}</td>
 				</tr>
 			</tbody>
 		</table>
