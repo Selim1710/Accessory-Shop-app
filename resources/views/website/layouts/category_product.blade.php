@@ -11,7 +11,7 @@
     <div class="filter"> <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#mobile-filter" aria-expanded="true" aria-controls="mobile-filter">Filters<span class="fa fa-filter pl-1"></span></button>
     </div>
     <div id="mobile-filter">
-        <p class="pl-sm-0 pl-2"> Home | <b>All Breads</b></p>
+        <p class="pl-sm-0 pl-2"> Home | <b>category-product</b></p>
         <div class="border-bottom pb-2 ml-2">
             <h4 id="burgundy">Filters</h4>
         </div>

@@ -11,18 +11,18 @@
     </div>
     <!-- mobile -->
     <div id="mobile-filter">
-        <p class="pl-sm-0 pl-2"> Home | <b>All Breads</b></p>
+        <p class="pl-sm-0 pl-2"> Home | <b>All-product</b></p>
         <div class="border-bottom pb-2 ml-2">
             <h4 id="burgundy">Filters</h4>
         </div>
         <div class="py-2 border-bottom ml-3">
             <h6 class="font-weight-bold">Brands</h6>
             <div id="orange"><span class="fa fa-minus"></span></div>
-            <form action="" method="">
+            <form action="">
                 @foreach($brands as $brand)
-                <div class="form-group">
-                    <input type="checkbox" name="{{ $brand->id }}" id="{{ $brand->id }}">
-                    <label for="{{ $brand->id }}">{{ $brand->brand_name }}</label>
+                <div class="form-group"> 
+                    <input type="checkbox" name="brand[]" value="{{ $brand->id }}"  id="{{ $brand->id }}"> 
+                    <label for="{{ $brand->id }}">{{ $brand->brand_name }}</label> 
                 </div>
                 @endforeach
                 <button type="summit" class="btn btn-secondary">Filter Result</button>
@@ -31,7 +31,7 @@
     </div>
     <!-- desktop -->
     <div id="sidebar">
-        <p> Home | <b>All Breads</b></p>
+        <p> Home | <b>All-product</b></p>
         <div class="border-bottom pb-2 ml-2">
             <h4 id="burgundy">Filters</h4>
         </div>

@@ -149,7 +149,6 @@
 					<td>interior color</td>
 					<td>{{ $product->interior_color }}</td>
 				</tr>
-				
 			</tbody>
 		</table>
 		<!--  Warranty -->
@@ -164,6 +163,13 @@
 				</tr>
 			</tbody>
 		</table>
+		<br>
+		<div class="related_accessory">
+			<a href="{{ route('website.product.accessory',$product->id) }}" class="btn btn-danger w-100 mt-2 mb-4 text-white">
+				<i class="fa fa-search"></i>  Find related accessory for this product !
+			</a>
+		</div>
+
 	</div>
 </section>
 @endsection

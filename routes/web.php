@@ -34,6 +34,7 @@ Route::group(['prefix' => 'website'], function () {
     // product
     Route::get('/view/all/product', [HomeController::class, 'allProduct'])->name('website.all.product');
     Route::get('/product/details/{id}', [HomeController::class, 'productDetails'])->name('website.product.details');
+    Route::get('/product/related/accessory/{id}', [HomeController::class, 'productAccessory'])->name('website.product.accessory');
 
     // accessory
     Route::get('/view/all/accessories', [HomeController::class, 'allAccessory'])->name('website.all.accessory');
