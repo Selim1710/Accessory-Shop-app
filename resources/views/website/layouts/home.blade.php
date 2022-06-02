@@ -174,7 +174,7 @@
                             </h5>
                             <h5>Price: {{ $accessory->price }}</h5>
                             <h6 class="text-danger">Offer: {{ $accessory->offer }} %</h6>
-                            <a href="" class="btn btn-info">Add To Cart</a>
+                            <a href="" class="">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -203,17 +203,50 @@
                     <div class="card_img">
                         <img src="https://placeimg.com/380/230/nature" alt="">
                         <span>
-                            <h4>heading</h4>
+                            <h4>40% discount</h4>
                         </span>
                     </div>
                     <div class="card_desc">
-                        <h3>Heading</h3>
+                        <h3 class="text-danger">Selling product and accessories in chip rate</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
                             voluptas totam</p>
                         <a href="#" class="btn_card">Read</a>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4">
+                <div class="card_content">
+                    <div class="card_img">
+                        <img src="https://placeimg.com/380/230/nature" alt="">
+                        <span>
+                            <h4>40% discount</h4>
+                        </span>
+                    </div>
+                    <div class="card_desc">
+                        <h3 class="text-danger">Selling product and accessories in chip rate</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+                        <a href="#" class="btn_card">Read</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card_content">
+                    <div class="card_img">
+                        <img src="https://placeimg.com/380/230/nature" alt="">
+                        <span>
+                            <h4>40% discount</h4>
+                        </span>
+                    </div>
+                    <div class="card_desc">
+                        <h3 class="text-danger">Selling product and accessories in chip rate</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, voluptatum! Dolor quo, perspiciatis
+                            voluptas totam</p>
+                        <a href="#" class="btn_card">Read</a>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </section>
