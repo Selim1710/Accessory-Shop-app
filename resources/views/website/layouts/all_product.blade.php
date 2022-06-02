@@ -9,6 +9,7 @@
 <section class="All_product clearfix">
     <div class="filter"> <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#mobile-filter" aria-expanded="true" aria-controls="mobile-filter">Filters<span class="fa fa-filter pl-1"></span></button>
     </div>
+    <!-- mobile -->
     <div id="mobile-filter">
         <p class="pl-sm-0 pl-2"> Home | <b>All Breads</b></p>
         <div class="border-bottom pb-2 ml-2">
@@ -17,14 +18,18 @@
         <div class="py-2 border-bottom ml-3">
             <h6 class="font-weight-bold">Brands</h6>
             <div id="orange"><span class="fa fa-minus"></span></div>
-            <form>
-                <div class="form-group"> <input type="checkbox" id="artisan"> <label for="artisan">Fresh Artisan Breads</label> </div>
-                <div class="form-group"> <input type="checkbox" id="breakfast"> <label for="breakfast">Breakfast Breads</label> </div>
-                <div class="form-group"> <input type="checkbox" id="healthy"> <label for="healthy">Healthy Breads</label> </div>
+            <form action="" method="">
+                @foreach($brands as $brand)
+                <div class="form-group">
+                    <input type="checkbox" name="{{ $brand->id }}" id="{{ $brand->id }}">
+                    <label for="{{ $brand->id }}">{{ $brand->brand_name }}</label>
+                </div>
+                @endforeach
+                <button type="summit" class="btn btn-secondary">Filter Result</button>
             </form>
         </div>
     </div>
-    <!-- Sidebar filter section -->
+    <!-- desktop -->
     <div id="sidebar">
         <p> Home | <b>All Breads</b></p>
         <div class="border-bottom pb-2 ml-2">
@@ -33,10 +38,14 @@
         <div class="py-2 border-bottom ml-3">
             <h6 class="font-weight-bold">Brands</h6>
             <div id="orange"><span class="fa fa-minus"></span></div>
-            <form>
-                <div class="form-group"> <input type="checkbox" id="artisan"> <label for="artisan">Fresh Artisan Breads</label> </div>
-                <div class="form-group"> <input type="checkbox" id="breakfast"> <label for="breakfast">Breakfast Breads</label> </div>
-                <div class="form-group"> <input type="checkbox" id="healthy"> <label for="healthy">Healthy Breads</label> </div>
+            <form action="">
+                @foreach($brands as $brand)
+                <div class="form-group"> 
+                    <input type="checkbox" name="brand[]" value="{{ $brand->id }}"  id="{{ $brand->id }}"> 
+                    <label for="{{ $brand->id }}">{{ $brand->brand_name }}</label> 
+                </div>
+                @endforeach
+                <button type="summit" class="btn btn-secondary">Filter Result</button>
             </form>
         </div>
     </div>

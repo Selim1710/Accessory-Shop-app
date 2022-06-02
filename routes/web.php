@@ -28,9 +28,8 @@ Route::group(['prefix' => 'website'], function () {
     // search
     Route::post('/user/search/product', [HomeController::class, 'search'])->name('website.search');
 
-      // categories
-      Route::get('/show/sub/category/product/{id}', [HomeController::class, 'BrandProduct'])->name('show.sub.category.product');
-      Route::get('/show/category/product/{id}', [HomeController::class, 'categoryProduct'])->name('show.category.product');  
+    // categories
+    Route::get('/show/category/product/{id}', [HomeController::class, 'categoryProduct'])->name('show.category.product');
 
     // product
     Route::get('/view/all/product', [HomeController::class, 'allProduct'])->name('website.all.product');
