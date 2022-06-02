@@ -12,9 +12,14 @@
       <!-- search -->
       <div class="container h-100 mt-4">
          <div class="d-flex justify-content-center h-100">
-            <form action="#">
+            <form action="{{ route('website.search') }}" method="POST">
+               @csrf
                <div class="searchbar">
-                  <input class="search_input" type="text" name="" placeholder="Search...">
+                  @if(!empty($search))
+                  <input class="search_input" type="text" name="search" value="{{ $search }}"  placeholder="Search...">
+                  @else
+                  <input class="search_input" type="text" name="search"placeholder="Search...">
+                  @endif
                   <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
                </div>
             </form>

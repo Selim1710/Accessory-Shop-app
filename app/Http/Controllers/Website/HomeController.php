@@ -24,14 +24,22 @@ class HomeController extends Controller
     {
         $search = $request['search'] ?? "";
         if ($search != "") {
-            $products = Product::where('model', 'LIKE', '%' . $search . '%')
-                ->orwhere('product_name', 'LIKE', '%' . $search . '%')
+            $products = Product::where('model', 'LIKE', "%$search%")
+                ->orwhere('name', 'LIKE', "%$search%")
                 ->orderBy('id', 'DESC')
                 ->get();
+            $accessories = Accessory::where('model', 'LIKE', "%$search%")
+                ->orwhere('name', 'LIKE', "%$search%")
+                ->orderBy('id', 'DESC')
+                ->get();
+            $result1 = $products->count();
+            $result2 = $accessories->count();
         } else {
-            $products = Product::with('subCategory')->orderBy('id', 'DESC')->get();
+            $products = Product::with('brand')->orderBy('id', 'DESC')->get();
+            $accessories = Accessory::with('product')->orderBy('id', 'DESC')->get();
+            $result1 = 0;
         }
-        return view('website.layouts.search', compact('products', 'search'));
+        return view('website.layouts.search', compact('products', 'accessories', 'search', 'result1', 'result2'));
     }
     public function categoryProduct($id)
     {
@@ -47,7 +55,7 @@ class HomeController extends Controller
     {
         $checkBrand = $request['brand'] ?? "";
         if ($checkBrand) {
-            $products = Product::whereBetween('brand_id',[$checkBrand])->orderBy('id', 'DESC')->paginate(6);
+            $products = Product::whereBetween('brand_id', [$checkBrand])->orderBy('id', 'DESC')->paginate(6);
             $brands = Brand::with('product')->get();
             return view('website.layouts.all_product', compact('products', 'brands'));
         } else {
@@ -71,9 +79,9 @@ class HomeController extends Controller
     public function productAccessory($id)
     {
         $product = Product::find($id);
-        $accessories = Accessory::where('product_id',$product->id)->orderBy('id', 'DESC')->paginate(4);
+        $accessories = Accessory::where('product_id', $product->id)->orderBy('id', 'DESC')->paginate(4);
         $result = $accessories->count();
-        return view('website.layouts.product_accessory', compact('accessories','result'));
+        return view('website.layouts.product_accessory', compact('accessories', 'result'));
     }
 
     public function accessoryDetails($id)
