@@ -53,9 +53,12 @@ class HomeController extends Controller
 
     public function allProduct(Request $request)
     {
+        // return $request->all();
         $checkBrand = $request['brand'] ?? "";
+        // return gettype($checkBrand);
+
         if ($checkBrand) {
-            $products = Product::whereBetween('brand_id', [$checkBrand])->orderBy('id', 'DESC')->paginate(6);
+            $products = Product::whereIn('brand_id', $checkBrand)->orderBy('id', 'DESC')->paginate(6);
             $brands = Brand::with('product')->get();
             return view('website.layouts.all_product', compact('products', 'brands'));
         } else {
