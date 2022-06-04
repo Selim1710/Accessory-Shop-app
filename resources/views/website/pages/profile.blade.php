@@ -29,13 +29,6 @@
                 <a href="{{ route('user.edit.profile',$user->id) }}" class="btn btn-secondary">Edit profile</a>
                 <a href="{{ route('user.logout') }}" class="btn btn-danger">Logout</a>
             </div>
-            <!-- user image -->
-            <div class="user-image mt-2">
-                <img src="{{ asset('/uploads/users/'.$user->image ) }}" alt="#" class="img-fluid" style="border:2px solid red;">
-            </div>
-            <div class="change-image mt-2">
-                <a href="{{ route('user.change.profile.image',$user->id) }}" class="btn btn-primary">Change</a>
-            </div>
             <br><br>
             <div class="user-details mt-4">
                 <nav>

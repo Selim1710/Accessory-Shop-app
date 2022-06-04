@@ -65,7 +65,7 @@ class UserController extends Controller
                 "address" => $request->address,
                 "phone" => $request->phone,
             ]);
-            return redirect()->route('users.login.form')->with('message', 'You have registered. Now you can login');
+            return redirect()->route('users.login.form')->with('message', 'You have registered. Now you can sign in');
         }
     }
 
@@ -82,26 +82,6 @@ class UserController extends Controller
         $orders = Order::where('customer_id', '=', $id)->get();
         $total_product = Order::where('customer_id', $id)->count();
         return view('website.pages.profile', compact('user', 'carts', 'orders','total_product'));
-    }
-
-    public function changeImage($id)
-    {
-        $user = User::find($id);
-        return view('website.pages.profile_image_form', compact('user'));
-    }
-    public function updateProfileImage(Request $request, $id)
-    {
-        $user = User::find($id);
-        $fileName = "";
-        if ($request->hasfile('image')) {
-            $file = $request->file('image');
-            $filename = date('Ymdmhs') . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('/uploads/users'), $filename);
-        }
-        $user->update([
-            "image" => $filename,
-        ]);
-        return redirect()->route('user.profile', $user->id)->with('message', 'Profile Image Updated');
     }
 
     public function edit($id)

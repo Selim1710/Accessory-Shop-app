@@ -9,26 +9,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- style -->
     <link rel="stylesheet" href="{{ asset('website/login/form.css') }}">
-    <title>User login form</title>
+    <title>User registration form</title>
 </head>
 
 <body>
     <div class="wrapper fadeInDown">
-        <!-- Message -->
-        @if(session()->has('error'))
-        <p class="alert alert-danger">{{ session()->get('error') }}</p>
-        @endif
-        @if(session()->has('message'))
-        <p class="alert alert-success text-center">{{ session()->get('message') }}</p>
-        @endif
-        <!-- end -->
         <section class="My_form p-4">
             <div class="head text-center m-4">
                 <h1>Accessory Shopping Registration Form</h1>
             </div>
             <br><br>
             <div class="container">
-                <form action="{{ route('user.do.registration') }}">
+                <!-- Message -->
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                @if(session()->has('error'))
+                <p class="alert alert-danger">{{ session()->get('error') }}</p>
+                @endif
+                @if(session()->has('message'))
+                <p class="alert alert-success text-center">{{ session()->get('message') }}</p>
+                @endif
+                <!-- end -->
+                <form action="{{ route('user.do.registration') }}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-lg-6 border-right">
                             <div class="form-group">
@@ -47,7 +57,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="adderss">adderss</label>
-                                <textarea name="adderss" placeholder="Enter your adderss" id="adderss" class="form-control"></textarea>
+                                <textarea name="address" placeholder="Enter your adderss" id="adderss" class="form-control"></textarea>
                                 <div class="form-row mt-3">
                                     <div class="form-group ml-3">
                                         <label for="password">Enter password</label>

@@ -49,17 +49,16 @@ Route::group(['prefix' => 'website'], function () {
     Route::post('/user/do/registration', [UserController::class, 'doRegistration'])->name('user.do.registration');
     Route::get('/user/logout', [UserController::class, 'logout'])->name('user.logout');
 
-    // user profile
-    Route::get('/user/profile/{id}', [UserController::class, 'profile'])->name('user.profile');
-    Route::get('/user/change/profile/image/{id}', [UserController::class, 'changeImage'])->name('user.change.profile.image');
-    Route::get('/user/edit/profile/{id}', [UserController::class, 'edit'])->name('user.edit.profile');
-    Route::post('/user/update/profile/{id}', [UserController::class, 'updateProfile'])->name('user.update.profile');
-    Route::post('/user/update/profile/image/{id}', [UserController::class, 'updateProfileImage'])->name('user.update.profile.image');
-
     // download pdf
     Route::get('/user/download/pdf/{id}', [UserController::class, 'downloadPDF'])->name('user.download.pdf');
 
     Route::group(['middleware' => 'check_customer'], function () {
+
+        // user profile
+        Route::get('/user/profile/{id}', [UserController::class, 'profile'])->name('user.profile');
+        Route::get('/user/edit/profile/{id}', [UserController::class, 'edit'])->name('user.edit.profile');
+        Route::post('/user/update/profile/{id}', [UserController::class, 'updateProfile'])->name('user.update.profile');
+
         // add to cart
         Route::get('/add/to/cart/{id}', [CartController::class, 'cart'])->name('add.to.cart');
         Route::get('/clear/cart', [CartController::class, 'clearCart'])->name('clear.cart');

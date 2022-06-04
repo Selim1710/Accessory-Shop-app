@@ -14,30 +14,31 @@
 
 <body>
     <div class="wrapper fadeInDown">
-        <!-- Message -->
-        @if(session()->has('error'))
-        <p class="alert alert-danger">{{ session()->get('error') }}</p>
-        @endif
-        @if(session()->has('message'))
-        <p class="alert alert-success text-center">{{ session()->get('message') }}</p>
-        @endif
-        <!-- end -->
         <section class="My_form p-4">
             <div class="head text-center m-4">
                 <h1>Accessory Shopping Login Form</h1>
             </div>
             <br><br>
             <div class="container">
+                <!-- Message -->
+                @if(session()->has('error'))
+                <p class="alert alert-danger text-center">{{ session()->get('error') }}</p>
+                @endif
+                @if(session()->has('message'))
+                <p class="alert alert-success text-center">{{ session()->get('message') }}</p>
+                @endif
+                <!-- end -->
                 <div class="row">
                     <div class="col-lg-6 border-right col-sm-12 col-md-12">
                         <form action="{{ route('user.do.login') }}" method="POST">
+                            @csrf
                             <div class="form-group">
                                 <label for="">Enter Your Email</label>
                                 <input type="email" name="email" placeholder="Enter input" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="">Enter Your Password</label>
-                                <input type="text" name="password" placeholder="Enter input" class="form-control">
+                                <input type="password" name="password" placeholder="Enter input" class="form-control">
                             </div>
                             <button class="btn btn-warning text-white w-100"><i class="fa fa-paper-plane"></i> Sign In</button>
                         </form>

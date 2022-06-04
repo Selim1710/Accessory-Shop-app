@@ -16,9 +16,9 @@
                @csrf
                <div class="searchbar">
                   @if(!empty($search))
-                  <input class="search_input" type="text" name="search" value="{{ $search }}"  placeholder="Search...">
+                  <input class="search_input" type="text" name="search" value="{{ $search }}" placeholder="Search...">
                   @else
-                  <input class="search_input" type="text" name="search"placeholder="Search...">
+                  <input class="search_input" type="text" name="search" placeholder="Search...">
                   @endif
                   <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
                </div>
@@ -26,17 +26,25 @@
          </div>
       </div>
       <!-- add to cart -->
-      <a href="#" class="menu_item">
+      @if(auth()->user())
+      <a href="{{ route('user.profile',auth()->user()->id) }}" class="menu_item">
          <div class="d-flex">
             <i class="fa-solid fa-basket-shopping fa-2xl"></i><span class="badge badge-danger">0 items</span>
          </div>
       </a>
-      <!-- user -->
+      <!-- notification -->
       <a href="#" class="menu_item">
          <div class="d-flex">
-            <i class="fa-solid fa-user fa-2xl"></i><span class="badge badge-secondary">0 items</span>
+            <i class="fa-regular fa-bell fa-2xl"></i><span class="badge badge-secondary">0 items</span>
          </div>
       </a>
+      @else
+      <a href="{{ route('users.login.form') }}" class="menu_item">
+         <div class="d-flex">
+            <i class="fa-solid fa-basket-shopping fa-2xl"></i><span class="badge badge-danger">0 items</span>
+         </div>
+      </a>
+      @endif
    </div>
 </div>
 
