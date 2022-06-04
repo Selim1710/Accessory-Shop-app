@@ -20,5 +20,8 @@ class Product extends Model
     public function accessory(){
         return $this->hasMany(Accessory::class);
     }
+    public function offer(){
+        return $this->belongsTo(Offer::class);
+    }
 
 }

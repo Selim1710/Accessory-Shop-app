@@ -124,6 +124,7 @@
                 @foreach($products as $product)
                 <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
                     <div class="card">
+                        <h6><span class="badge badge-info">{{ $product->offer }} % off</span></h6>
                         <a href="{{ route('website.product.details',$product->id) }}">
                             <img class="card-img-top" src="{{ asset('uploads/products/'.$product->image) }}">
                         </a>
@@ -132,7 +133,7 @@
                             <div class="d-flex flex-row my-2">
                                 <div class="text-muted">Price: ৳ {{ $product->price }}</div>
                                 <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
-                            </div> <a href="{{ route('add.to.cart',$product->id) }}" class="btn btn-warning w-100 rounded mb-2">Add to cart</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -174,7 +175,7 @@
                             </h5>
                             <h5>Price: {{ $accessory->price }}</h5>
                             <h6 class="text-danger">Offer: {{ $accessory->offer }} %</h6>
-                            <a href="{{ route('accessory.add.to.cart',$accessory->id) }}">Add To Cart</a>
+                            <a href="{{ route('accessory.add.to.cart',$accessory->id) }}" class="btn btn-info">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -246,7 +247,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>

@@ -20,9 +20,9 @@
             <div id="orange"><span class="fa fa-minus"></span></div>
             <form action="">
                 @foreach($brands as $brand)
-                <div class="form-group"> 
-                    <input type="checkbox" name="brand[]" value="{{ $brand->id }}"  id="{{ $brand->id }}"> 
-                    <label for="{{ $brand->id }}">{{ $brand->brand_name }}</label> 
+                <div class="form-group">
+                    <input type="checkbox" name="brand[]" value="{{ $brand->id }}" id="{{ $brand->id }}">
+                    <label for="{{ $brand->id }}">{{ $brand->brand_name }}</label>
                 </div>
                 @endforeach
                 <button type="summit" class="btn btn-secondary">Filter Result</button>
@@ -40,9 +40,9 @@
             <div id="orange"><span class="fa fa-minus"></span></div>
             <form action="">
                 @foreach($brands as $brand)
-                <div class="form-group"> 
-                    <input type="checkbox" name="brand[]" value="{{ $brand->id }}"  id="{{ $brand->id }}"> 
-                    <label for="{{ $brand->id }}">{{ $brand->brand_name }}</label> 
+                <div class="form-group">
+                    <input type="checkbox" name="brand[]" value="{{ $brand->id }}" id="{{ $brand->id }}">
+                    <label for="{{ $brand->id }}">{{ $brand->brand_name }}</label>
                 </div>
                 @endforeach
                 <button type="summit" class="btn btn-secondary">Filter Result</button>
@@ -53,20 +53,20 @@
     <div>
         <div class="container">
             <div class="d-flex flex-row">
-                <div class="text-muted m-2" id="res">Showing 44 results</div>
+                <div class="text-muted m-2" id="res">Showing {{ $result }} results</div>
                 <div class="ml-auto mr-lg-4">
-                    <div id="sorting" class="border rounded p-1 m-1"> <span class="text-muted">Sort by</span>
+                    <div id="sorting" class="border rounded p-1 m-1"><span class="text-muted">Sort by</span>
                         <select name="sort" id="sort">
-                            <option value="popularity"><b>Popularity</b></option>
-                            <option value="prcie"><b>Price</b></option>
-                            <option value="rating"><b>Rating</b></option>
+                            <option value="all"><b>All</b></option>
+                            <option value="new"><b>New</b></option>
+                            <option value="recondition"><b>Recondition</b></option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="row">
                 @foreach($products as $product)
-                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-2">
+                <div class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-4">
                     <div class="card">
                         <a href="{{ route('website.product.details',$product->id) }}">
                             <img class="card-img-top" src="{{ asset('uploads/products/'.$product->image) }}">
@@ -76,7 +76,7 @@
                             <div class="d-flex flex-row my-2">
                                 <div class="text-muted">Price: ৳ {{ $product->price }}</div>
                                 <div class="ml-auto"> <button class="border rounded bg-white sign"><span class="fa fa-plus" id="orange"></span></button> <span class="px-sm-1">1 loaf</span> <button class="border rounded bg-white sign"><span class="fa fa-minus" id="orange"></span></button> </div>
-                            </div> <a href="{{ route('add.to.cart',$product->id) }}" class="btn btn-warning w-100 rounded mb-2">Add to cart</a>
+                            </div>
                         </div>
                     </div>
                 </div>

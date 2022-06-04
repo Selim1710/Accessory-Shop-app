@@ -15,6 +15,8 @@ class HomeController extends Controller
     public function home()
     {
         $categories = Category::with('brand')->get();
+        // $t = Category::with('brand')->skip(2)->first();
+        // return $t;
         $products = Product::with('brand')->orderBy('id', 'DESC')->paginate(6);
         $accessories = Accessory::with('product')->orderBy('id', 'DESC')->paginate(6);
         return view('website.layouts.home', compact('categories', 'products', 'accessories'));
@@ -53,18 +55,17 @@ class HomeController extends Controller
 
     public function allProduct(Request $request)
     {
-        // return $request->all();
         $checkBrand = $request['brand'] ?? "";
-        // return gettype($checkBrand);
-
         if ($checkBrand) {
             $products = Product::whereIn('brand_id', $checkBrand)->orderBy('id', 'DESC')->paginate(6);
             $brands = Brand::with('product')->get();
-            return view('website.layouts.all_product', compact('products', 'brands'));
+            $result = Product::all()->count();
+            return view('website.layouts.all_product', compact('products', 'brands','result'));
         } else {
             $products = Product::with('brand')->orderBy('id', 'DESC')->paginate(6);
             $brands = Brand::with('product')->get();
-            return view('website.layouts.all_product', compact('products', 'brands'));
+            $result = Product::all()->count();
+            return view('website.layouts.all_product', compact('products', 'brands','result'));
         }
     }
     public function allAccessory()

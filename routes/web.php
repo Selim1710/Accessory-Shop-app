@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\StockController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\ManageOrderController;
+use App\Http\Controllers\Backend\OfferController;
 use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Website\CartController;
 use App\Http\Controllers\Website\HomeController;
@@ -135,6 +136,14 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/view/accessory/image/{id}', [AccessoryController::class, 'view'])->name('admin.view.accessory');
         Route::post('/change/accessory/image/{id}', [AccessoryController::class, 'change'])->name('admin.change.accessory.image');
 
+          // offer
+          Route::get('/manage/offer', [OfferController::class, 'manageOffer'])->name('admin.manage.offer');
+          Route::get('/add/offer', [OfferController::class, 'add'])->name('admin.add.offer');
+          Route::post('/store/offer', [OfferController::class, 'store'])->name('admin.store.offer');
+          Route::get('/delete/offer/{id}', [OfferController::class, 'delete'])->name('admin.delete.offer');
+          Route::get('/view/offer/image/{id}', [OfferController::class, 'view'])->name('admin.view.offer');
+          Route::post('/change/offer/image/{id}', [OfferController::class, 'change'])->name('admin.change.offer.image');
+  
         // Order List
         Route::get('/manage/order', [ManageOrderController::class, 'manageOrder'])->name('admin.manage.order');
         Route::get('/accept/order/{id}', [ManageOrderController::class, 'acceptOrder'])->name('admin.accept.order');
