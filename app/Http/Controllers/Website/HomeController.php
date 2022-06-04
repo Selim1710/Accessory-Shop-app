@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Accessory;
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Offer;
 use App\Models\Product;
 use App\Models\Stock;
 use Illuminate\Http\Request;
@@ -15,11 +16,12 @@ class HomeController extends Controller
     public function home()
     {
         $categories = Category::with('brand')->get();
-        // $t = Category::with('brand')->skip(2)->first();
-        // return $t;
+        $offers = Offer::with('product')->get();
+        $secondOffer = Offer::with('product')->first();
+        $thirdOffer = Offer::with('product')->skip(1)->first();
         $products = Product::with('brand')->orderBy('id', 'DESC')->paginate(6);
         $accessories = Accessory::with('product')->orderBy('id', 'DESC')->paginate(6);
-        return view('website.layouts.home', compact('categories', 'products', 'accessories'));
+        return view('website.layouts.home', compact('categories', 'products', 'accessories','offers','secondOffer','thirdOffer'));
     }
 
     public function search(Request $request)

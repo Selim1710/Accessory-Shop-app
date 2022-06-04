@@ -162,7 +162,10 @@
 }
 
 /*********************** carousel ************************/
-
+.offer_image{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /*********************** category ************************/
 .all_categories {

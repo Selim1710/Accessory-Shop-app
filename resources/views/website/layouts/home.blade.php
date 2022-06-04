@@ -8,15 +8,17 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
+        @foreach($offers as $offer)
+        @if($loop->first)
         <div class="carousel-item active">
-            <img class="d-block w-100" src="{{ asset('website/images/t1.jpg') }}" alt="First slide">
+            <img class="w-100" src="{{ asset('uploads/offers/'.$offer->image) }}" alt="First slide">
         </div>
+        @else
         <div class="carousel-item">
-            <img class="d-block w-100" src="{{ asset('website/images/t2.jpg') }}" alt="Second slide">
+            <img class="w-100" src="{{ asset('uploads/offers/'.$offer->image) }}" alt="Second slide">
         </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="{{ asset('website/images/t3.png') }}" alt="Third slide">
-        </div>
+        @endif
+        @endforeach
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -25,63 +27,34 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </a>
 </div>
-<!-- down 2 -->
+<!-- down 2 column -->
+@if($secondOffer && $thirdOffer )
 <div class="mt-4">
-    <div class="row">
-        <div class="col-lg-6 col-sm-6">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="{{ asset('website/images/t1.jpg') }}" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{{ asset('website/images/t2.jpg') }}" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{{ asset('website/images/t3.png') }}" alt="Third slide">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 mt-2 mb-3">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-fluid offer_image" src="{{ asset('uploads/offers/'.$secondOffer->image) }}" alt="First slide">
+                        </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
             </div>
-        </div>
-        <div class="col-lg-6 col-sm-6 mt-2 mb-2">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="{{ asset('website/images/t1.jpg') }}" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{{ asset('website/images/t2.jpg') }}" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{{ asset('website/images/t3.png') }}" alt="Third slide">
+            <div class="col-lg-6 col-md-6 mt-2 mb-3">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-fluid offer_image" src="{{ asset('uploads/offers/'.$thirdOffer->image) }}" alt="First slide">
+                        </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
             </div>
         </div>
     </div>
 </div>
+@else
+@endif
 <!-- category -->
 <section class="all_categories">
     <br>
