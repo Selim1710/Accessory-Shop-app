@@ -29,7 +29,7 @@
       @if(auth()->user())
       <a href="{{ route('user.profile',auth()->user()->id) }}" class="menu_item">
          <div class="d-flex">
-            <i class="fa-solid fa-basket-shopping fa-2xl"></i><span class="badge badge-danger">0 items</span>
+            <i class="fa-solid fa-basket-shopping fa-2xl"></i><span class="badge badge-danger">{{ session()->has('cart') ? count(session()->get('cart')):0 }}</span>
          </div>
       </a>
       <!-- notification -->

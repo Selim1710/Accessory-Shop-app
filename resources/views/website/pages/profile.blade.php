@@ -16,7 +16,7 @@
 <body class="">
     <section class="user-profile">
         <div class="container">
-            <h1 class="text-center pt-3 text-capitalize">{{ $user->name }}<br></h1>
+            <h2 class="text-center pt-3 text-capitalize">{{ $user->name }}<br></h2>
             <!-- Message -->
             @if(session()->has('error'))
             <p class="alert alert-danger text-center">{{ session()->get('error') }}</p>
@@ -25,12 +25,12 @@
             <p class="alert alert-success text-center">{{ session()->get('message') }}</p>
             @endif
             <!-- end -->
-            <div class="edit-profile text-right">
+            <div class="edit-profile">
                 <a href="{{ route('user.edit.profile',$user->id) }}" class="btn btn-secondary">Edit profile</a>
                 <a href="{{ route('user.logout') }}" class="btn btn-danger">Logout</a>
             </div>
             <br><br>
-            <div class="user-details mt-4">
+            <div class="user_details">
                 <nav>
                     <div class="nav nav-tabs nav-fill text-uppercase" id="nav-tab" role="tablist">
                         <a class="nav-item nav-link active" id="user_details-tab" data-toggle="tab" href="#user_details" role="tab" aria-controls="user_details" aria-selected="true">User-details</a>
@@ -54,16 +54,14 @@
                                 Message
                             </a>
                         </div>
-                        <div class="d-flex">
+                        <div class="order_list_table">
                             @php
                             $grand_total= 0;
                             @endphp
-                            <table class="table border table-responsive w-75">
+                            <table class="table table-responsive border">
                                 <thead>
-                                    <th>Product-id</th>
-                                    <th>Model</th>
                                     <th>Name</th>
-                                    <th>Unit-Price</th>
+                                    <th>Price</th>
                                     <th>Offer</th>
                                     <th>Quantity</th>
                                     <th>Total</th>
@@ -73,8 +71,6 @@
                                 <tbody>
                                     @foreach($orders as $order)
                                     <tr>
-                                        <td>{{ $order->product_id }}</td>
-                                        <td>{{ $order->model }}</td>
                                         <td>{{ $order->product_name }}</td>
                                         <td>{{ $order->price }}</td>
                                         <td>{{ $order->offer }} %</td>
@@ -94,12 +90,12 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <div class="sub_total ml-2 p-2 text-center border">
-                                <h4 class="border p-2">Payment Summary:</h4>
-                                <h5 class="border p-2">Total-Product: {{ $total_product  }}</h5>
-                                <h5 class="border p-2">Sub-Total: {{ (int)$grand_total }}</h5>
-                                <h5 class="border p-2">Shipping Fee: 0</h5>
-                                <h5 class="border p-2">Total: {{ (int)$grand_total }} </h5>
+                            <div class="sub_total ml-2 p-2 text-center ">
+                                <h4 class="p-2">Payment Summary:</h4>
+                                <h5 class="p-2">Total-Product: {{ $total_product  }}</h5>
+                                <h5 class="p-2">Sub-Total: {{ (int)$grand_total }}</h5>
+                                <h5 class="p-2">Shipping Fee: 0</h5>
+                                <h5 class="p-2">Total: {{ (int)$grand_total }} </h5>
                                 <a href="{{ route('user.process.to.pay',$user->id) }}" class="btn btn-info w-100">
                                     PROCESS TO PAY
                                 </a>
@@ -112,12 +108,15 @@
                             <a href="{{ route('clear.cart') }}" class="btn btn-danger">
                                 Clear All
                             </a>
+                            <a href="{{ route('user.checkout') }}" class="btn btn-success">
+                                CheckOut
+                            </a>
                         </div>
-                        <div class="d-flex">
+                        <div class="my_cart_table">
                             @php
                             $sub_total= 0;
                             @endphp
-                            <table class="table table-hover border table-responsive w-75">
+                            <table class="table table-responsive border">
                                 <thead>
                                     <th>Product-id</th>
                                     <th>Model</th>
@@ -154,13 +153,13 @@
                                     @endif
                                 </tbody>
                             </table>
-                            <div class="sub_total ml-2 p-2 text-center border">
-                                <h4 class="border p-2">Order Summary:</h4>
-                                <h5 class="border p-2">Total-Product: {{ session()->has('cart') ? count(session()->get('cart')):0 }}</h5>
-                                <h5 class="border p-2">Sub-Total: {{ (int)$sub_total }}</h5>
-                                <h5 class="border p-2">Shipping Fee: 0</h5>
-                                <h5 class="border p-2">Total: {{ (int)$sub_total }} </h5>
-                                <a href="{{ route('user.checkout') }}" class="btn btn-success w-100">
+                            <div class="sub_total ml-2 p-2 text-center">
+                                <h4 class="p-2">Order Summary:</h4>
+                                <h5 class="p-2">Total-Product: {{ session()->has('cart') ? count(session()->get('cart')):0 }}</h5>
+                                <h5 class="p-2">Sub-Total: {{ (int)$sub_total }}</h5>
+                                <h5 class="p-2">Shipping Fee: 0</h5>
+                                <h5 class="p-2">Total: {{ (int)$sub_total }} </h5>
+                                <a href="{{ route('user.checkout') }}" class="btn btn-info w-100">
                                     CheckOut
                                 </a>
                             </div>
