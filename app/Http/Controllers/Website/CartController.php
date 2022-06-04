@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
+use App\Models\Accessory;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;

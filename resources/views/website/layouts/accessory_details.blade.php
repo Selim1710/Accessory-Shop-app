@@ -51,7 +51,7 @@
 										</form>
 									</div>
 									<div class="col-lg-6 pb-2 mt-5 ">
-										<a href="{{ route('add.to.cart',$accessory->id) }}" class="btn btn-info w-100">
+										<a href="{{ route('accessory.add.to.cart',$accessory->id) }}" class="btn btn-info w-100">
 											Add To Cart
 										</a>
 									</div>

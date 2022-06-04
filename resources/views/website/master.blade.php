@@ -12,13 +12,21 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- font awosome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    
+
 
     <title>accessory shop bd</title>
 </head>
 
 <body>
     @include('website.partials.header')
+    <!-- Message -->
+    @if(session()->has('error'))
+    <p class="alert alert-danger text-center">{{ session()->get('error') }}</p>
+    @endif
+    @if(session()->has('message'))
+    <p class="alert alert-success text-center">{{ session()->get('message') }}</p>
+    @endif
+    <!-- end -->
     @yield('contents')
     @include('website.partials.footer')
 

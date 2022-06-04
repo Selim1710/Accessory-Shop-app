@@ -15,10 +15,7 @@ use App\Http\Controllers\Website\HomeController;
 use App\Http\Controllers\Website\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SslCommerzPaymentController;
-
-
-
-
+use App\Http\Controllers\Website\AccessoryCartController;
 
 // Website Part
 Route::get('/', [HomeController::class, 'home'])->name('website.home');
@@ -64,6 +61,10 @@ Route::group(['prefix' => 'website'], function () {
         Route::get('/clear/cart', [CartController::class, 'clearCart'])->name('clear.cart');
         Route::get('/user/remove/cart/{id}', [CartController::class, 'remove'])->name('user.remove.cart');
         Route::get('/user/checkout', [CartController::class, 'checkout'])->name('user.checkout');
+
+        // accessory add to cart
+        Route::get('/accessory/add/to/cart/{id}', [AccessoryCartController::class, 'cart'])->name('accessory.add.to.cart');
+
         // order form
         Route::get('/order/form/{id}', [CartController::class, 'orderForm'])->name('website.order.form');
     });

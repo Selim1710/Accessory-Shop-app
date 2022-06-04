@@ -27,7 +27,7 @@
                             </h5>
                             <h5>Price: {{ $accessory->price }}</h5>
                             <h6 class="text-danger">Offer: {{ $accessory->offer }} %</h6>
-                            <a href="" class="btn btn-info">Add To Cart</a>
+                            <a href="{{ route('accessory.add.to.cart',$accessory->id) }}" class="btn btn-info">Add To Cart</a>
                         </div>
                     </div>
                 </div>
