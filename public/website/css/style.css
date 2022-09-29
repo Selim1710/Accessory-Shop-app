@@ -167,6 +167,24 @@
     background-size: cover;
 }
 
+.offer_image{
+    width: 100%;
+    height: 700px;
+}
+.sub_offer_image{
+    width: 100%;
+    height: 160px;
+}
+
+@media(max-width:768px){
+    .offer_image{
+        height: 300px;
+    }
+    .sub_offer_image{
+        height: 160px;
+    }
+}
+
 /*********************** category ************************/
 .all_categories {
     background-color: #dfe6e9;

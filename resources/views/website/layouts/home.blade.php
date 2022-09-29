@@ -1,51 +1,57 @@
 @extends('website.master')
 @section('contents')
 <!-- slider -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        @foreach($offers as $offer)
-        @if($loop->first)
-        <div class="carousel-item active">
-            <img class="w-100" src="{{ asset('uploads/offers/'.$offer->image) }}" alt="First slide">
+<div class="containder">
+    <div class="row">
+        <div class="col-12">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    @foreach($offers as $offer)
+                    @if($loop->first)
+                    <div class="carousel-item active">
+                        <img class="offer_image" src="{{ asset('uploads/offers/'.$offer->image) }}" alt="First slide">
+                    </div>
+                    @else
+                    <div class="carousel-item">
+                        <img class="offer_image" src="{{ asset('uploads/offers/'.$offer->image) }}" alt="Second slide">
+                    </div>
+                    @endif
+                    @endforeach
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
         </div>
-        @else
-        <div class="carousel-item">
-            <img class="w-100" src="{{ asset('uploads/offers/'.$offer->image) }}" alt="Second slide">
-        </div>
-        @endif
-        @endforeach
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </a>
 </div>
 <!-- down 2 column -->
 @if($secondOffer && $thirdOffer )
-<div class="mt-4">
+<div class="mt-2">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 mt-2 mb-3">
+            <div class="col-6 mt-2 mb-3">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="img-fluid offer_image" src="{{ asset('uploads/offers/'.$secondOffer->image) }}" alt="First slide">
+                            <img class="sub_offer_image" src="{{ asset('uploads/offers/'.$secondOffer->image) }}" alt="First slide">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 mt-2 mb-3">
+            <div class="col-6 mt-2 mb-3">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="img-fluid offer_image" src="{{ asset('uploads/offers/'.$thirdOffer->image) }}" alt="First slide">
+                            <img class="sub_offer_image" src="{{ asset('uploads/offers/'.$thirdOffer->image) }}" alt="First slide">
                         </div>
                     </div>
                 </div>
